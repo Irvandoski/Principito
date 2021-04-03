@@ -13,6 +13,7 @@ class Main(object):
         self.height = self.screen.GetSystemMetrics(1)
         self.G_principito_front = Objetos.Principito(0.30)
         self.G_escenas = Escenarios.Escenas(); 
+
     def keyPress(self,bkey,x,y):
         key = bkey.decode("utf-8")
         #SALIR
@@ -21,7 +22,7 @@ class Main(object):
             sys.exit()
         if key == 'q':
             glClearColor(0.027, 0.823, 0.835, 0.0)
-            glutDisplayFunc(self.G_escenas.escena1)
+            glutDisplayFunc(self.G_escenas.desierto)
             glFlush()
     def main(self):
         glutInit(sys.argv)
@@ -31,6 +32,7 @@ class Main(object):
         glutCreateWindow("Ventana")
         glutFullScreen()
         glutDisplayFunc(self.G_principito_front.portada)
+        #glutDisplayFunc(self.G_escenas.desierto)
         #glutIdleFunc(self.G_principito_front.principito)
         glutKeyboardFunc(self.keyPress)
         glClearColor(0.027, 0.823, 0.835, 0.0)
