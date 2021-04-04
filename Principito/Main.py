@@ -13,6 +13,7 @@ class Main(object):
         self.height = self.screen.GetSystemMetrics(1)
         self.G_principito_front = Objetos.Principito(0.30)
         self.G_escenas = Escenarios.Escenas()
+        self.G_dialogos = Objetos.CuadrosDeDialogo(.40)
         self.G_personas = Objetos.Personas(0.40)
         self.nivel = 0
     def keyPress(self,bkey,x,y):
@@ -21,6 +22,16 @@ class Main(object):
         if key == chr(27):
             os._exit(1) 
             sys.exit()
+        if key == 'q' and self.nivel == 4:
+            glClearColor(0.027, 0.823, 0.835, 0.0)
+            glutDisplayFunc(self.G_dialogos.cuadro_grande)
+            glFlush()
+            self.nivel +=1;
+        if key == 'q' and self.nivel == 3:
+            glClearColor(0.027, 0.823, 0.835, 0.0)
+            glutDisplayFunc(self.G_dialogos.cuadro_pequeño)
+            glFlush()
+            self.nivel +=1;
         if key == 'q' and self.nivel == 2:
             glClearColor(0.027, 0.823, 0.835, 0.0)
             glutDisplayFunc(self.G_personas.Silueta_2)
