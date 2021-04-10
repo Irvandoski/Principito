@@ -13,8 +13,8 @@ class Main(object):
         self.height = self.screen.GetSystemMetrics(1)
         self.G_principito_front = Objetos.Principito(0.30)
         self.G_escenas = Escenarios.Escenas()
-        self.G_dialogos = Objetos.CuadrosDeDialogo(.40)
-        self.G_personas = Objetos.Personas(0.40)
+        self.G_dialogos = Objetos.CuadrosDeDialogo(0.40)
+        self.G_personas = Objetos.Personas(0.40, 0.00, 0.00)
         self.nivel = 0
     def keyPress(self,bkey,x,y):
         key = bkey.decode("utf-8")

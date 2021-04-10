@@ -7,7 +7,7 @@ class Escenas(object):
     def __init__(self):
         self.escalaX = 1 
         self.escalaY = 16/9 
-        self.G_personas = Objetos.Personas(0.40)
+        self.G_personas = Objetos.Personas(0.40, 0.00, -0.25)
     def escena1(self):
         glClear(GL_COLOR_BUFFER_BIT)
         glColor3ub(255, 255, 250)
@@ -88,6 +88,14 @@ class Escenas(object):
          glVertex3f(-0.80,  0.80, -0.80)
          glVertex3f( 0.80,  0.80, -0.80)
          glVertex3f( 0.80, -0.80, -0.80)
+         glEnd()
+         
+         glColor3ub(55, 55, 255)
+         glBegin(GL_POLYGON)
+         glVertex3f(-0.60,  0.20,  0.60)
+         glVertex3f(-0.60,  0.20,  0.60)
+         glVertex3f(-0.40,  0.60,  0.60)
+         glVertex3f(-0.40,  0.60,  0.60)
          glEnd()
 
          glColor3ub(95, 95, 95)
