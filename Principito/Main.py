@@ -22,9 +22,14 @@ class Main(object):
         if key == chr(27):
             os._exit(1) 
             sys.exit()
+        if key == 'q' and self.nivel == 6:
+            glClearColor(0.027, 0.823, 0.835, 0.0)
+            glutDisplayFunc(self.G_personas.Farolero)
+            glFlush()
+            self.nivel +=1;
         if key == 'q' and self.nivel == 5:
             glClearColor(0.027, 0.823, 0.835, 0.0)
-            glutDisplayFunc(self.G_personas.Rey)
+            glutDisplayFunc(self.G_escenas.Cuarto)
             glFlush()
             self.nivel +=1;
         if key == 'q' and self.nivel == 4:

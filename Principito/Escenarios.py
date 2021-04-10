@@ -1,12 +1,13 @@
 from OpenGL.GL import *
 from OpenGL.GLU import *
 from OpenGL.GLUT import *
+import Objetos
 import sys
 class Escenas(object):
     def __init__(self):
         self.escalaX = 1 
         self.escalaY = 16/9 
- 
+        self.G_personas = Objetos.Personas(0.40)
     def escena1(self):
         glClear(GL_COLOR_BUFFER_BIT)
         glColor3ub(255, 255, 250)
@@ -76,4 +77,49 @@ class Escenas(object):
          glVertex2f(1,-1)
          glVertex2f(-1,-1)
          glEnd()
+         glFlush()
+         
+    def Cuarto(self):
+         glClear(GL_COLOR_BUFFER_BIT)
+
+         glColor3ub(55, 55, 55)
+         glBegin(GL_QUADS)
+         glVertex3f(-0.80, -0.80, -0.80)
+         glVertex3f(-0.80,  0.80, -0.80)
+         glVertex3f( 0.80,  0.80, -0.80)
+         glVertex3f( 0.80, -0.80, -0.80)
+         glEnd()
+
+         glColor3ub(95, 95, 95)
+         glBegin(GL_QUADS) 
+         glVertex3f(-0.80, -0.80, -0.80)
+         glVertex3f(-1.00, -1.00,  0.80)
+         glVertex3f(-1.00,  1.00,  0.80)
+         glVertex3f(-0.80,  0.80, -0.80)
+         glEnd()
+         
+         glColor3ub(95, 95, 95)
+         glBegin(GL_QUADS) 
+         glVertex3f( 0.80, -0.80, -0.80)
+         glVertex3f( 1.00, -1.00,  0.80)
+         glVertex3f( 1.00,  1.00,  0.80)
+         glVertex3f( 0.80,  0.80, -0.80)
+         glEnd()
+
+         glColor3ub(80, 80, 80)
+         glBegin(GL_QUADS) 
+         glVertex3f(-0.80,  0.80, -0.80)
+         glVertex3f(-1.00,  1.00,  0.80)
+         glVertex3f( 1.00,  1.00,  0.80)
+         glVertex3f( 0.80,  0.80, -0.80)
+         glEnd()
+
+         glColor3ub(80, 80, 80)
+         glBegin(GL_QUADS) 
+         glVertex3f(-0.80, -0.80, -0.80)
+         glVertex3f(-1.00, -1.00,  0.80)
+         glVertex3f( 1.00, -1.00,  0.80)
+         glVertex3f( 0.80, -0.80, -0.80)
+         glEnd()
+         self.G_personas.Rey()
          glFlush()
