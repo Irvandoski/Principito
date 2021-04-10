@@ -8,6 +8,10 @@ class Escenas(object):
         self.escalaX = 1 
         self.escalaY = 16/9 
         self.G_personas = Objetos.Personas(0.40, 0.00, -0.25)
+        self.G_dialogos = Objetos.CuadrosDeDialogo(0.40)
+        self.G_caras = Objetos.Caras(0.65,0.80,-0.99)
+        self.Scene_cont = 0
+        self.Dialog = " "
     def escena1(self):
         glClear(GL_COLOR_BUFFER_BIT)
         glColor3ub(255, 255, 250)
@@ -130,4 +134,15 @@ class Escenas(object):
          glVertex3f( 0.80, -0.80, -0.80)
          glEnd()
          self.G_personas.Rey()
+         if self.Scene_cont == 1:
+             self.G_personas.Rey()
+         elif self.Scene_cont == 2:
+             self.G_personas.Rey()
+             self.G_dialogos.cuadro_grande()
+             self.G_caras.Rey() 
+             font = GLUT_BITMAP_TIMES_ROMAN_24
+             glRasterPos2d(-0.1, 0.5) 
+             glColor3ub(70, 70, 255)
+             texto = self.Dialog.encode('cp1250')
+             glutBitmapString (font, texto)
          glFlush()
