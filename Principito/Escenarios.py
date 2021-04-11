@@ -3,15 +3,21 @@ from OpenGL.GLU import *
 from OpenGL.GLUT import *
 import Objetos
 import sys
+import time
 class Escenas(object):
-    def __init__(self):
+    def __init__(self, w, h):
         self.escalaX = 1 
         self.escalaY = 16/9 
         self.G_personas = Objetos.Personas(0.40, 0.00, -0.25)
         self.G_dialogos = Objetos.CuadrosDeDialogo(0.40)
         self.G_caras = Objetos.Caras(0.65,0.80,-0.99)
         self.Scene_cont = 0
+        self.Dialog_cont = 0
         self.Dialog = " "
+        self.Dialog_For = " "
+        self.w = w
+        self.h = h
+        self.wrote = 0
     def escena1(self):
         glClear(GL_COLOR_BUFFER_BIT)
         glColor3ub(255, 255, 250)
@@ -84,65 +90,89 @@ class Escenas(object):
          glFlush()
          
     def Cuarto(self):
-         glClear(GL_COLOR_BUFFER_BIT)
+        glClear(GL_COLOR_BUFFER_BIT)
 
-         glColor3ub(55, 55, 55)
-         glBegin(GL_QUADS)
-         glVertex3f(-0.80, -0.80, -0.80)
-         glVertex3f(-0.80,  0.80, -0.80)
-         glVertex3f( 0.80,  0.80, -0.80)
-         glVertex3f( 0.80, -0.80, -0.80)
-         glEnd()
+        glColor3ub(55, 55, 55)
+        glBegin(GL_QUADS)
+        glVertex3f(-0.80, -0.80, -0.80)
+        glVertex3f(-0.80,  0.80, -0.80)
+        glVertex3f( 0.80,  0.80, -0.80)
+        glVertex3f( 0.80, -0.80, -0.80)
+        glEnd()
          
-         glColor3ub(55, 55, 255)
-         glBegin(GL_POLYGON)
-         glVertex3f(-0.60,  0.20,  0.60)
-         glVertex3f(-0.60,  0.20,  0.60)
-         glVertex3f(-0.40,  0.60,  0.60)
-         glVertex3f(-0.40,  0.60,  0.60)
-         glEnd()
+        glColor3ub(55, 55, 255)
+        glBegin(GL_POLYGON)
+        glVertex3f(-0.60,  0.20,  0.60)
+        glVertex3f(-0.60,  0.20,  0.60)
+        glVertex3f(-0.40,  0.60,  0.60)
+        glVertex3f(-0.40,  0.60,  0.60)
+        glEnd()
 
-         glColor3ub(95, 95, 95)
-         glBegin(GL_QUADS) 
-         glVertex3f(-0.80, -0.80, -0.80)
-         glVertex3f(-1.00, -1.00,  0.80)
-         glVertex3f(-1.00,  1.00,  0.80)
-         glVertex3f(-0.80,  0.80, -0.80)
-         glEnd()
-         
-         glColor3ub(95, 95, 95)
-         glBegin(GL_QUADS) 
-         glVertex3f( 0.80, -0.80, -0.80)
-         glVertex3f( 1.00, -1.00,  0.80)
-         glVertex3f( 1.00,  1.00,  0.80)
-         glVertex3f( 0.80,  0.80, -0.80)
-         glEnd()
+        glColor3ub(95, 95, 95)
+        glBegin(GL_QUADS) 
+        glVertex3f(-0.80, -0.80, -0.80)
+        glVertex3f(-1.00, -1.00,  0.80)
+        glVertex3f(-1.00,  1.00,  0.80)
+        glVertex3f(-0.80,  0.80, -0.80)
+        glEnd()
+        
+        glColor3ub(95, 95, 95)
+        glBegin(GL_QUADS) 
+        glVertex3f( 0.80, -0.80, -0.80)
+        glVertex3f( 1.00, -1.00,  0.80)
+        glVertex3f( 1.00,  1.00,  0.80)
+        glVertex3f( 0.80,  0.80, -0.80)
+        glEnd()
+        
+        glColor3ub(80, 80, 80)
+        glBegin(GL_QUADS) 
+        glVertex3f(-0.80,  0.80, -0.80)
+        glVertex3f(-1.00,  1.00,  0.80)
+        glVertex3f( 1.00,  1.00,  0.80)
+        glVertex3f( 0.80,  0.80, -0.80)
+        glEnd()
 
-         glColor3ub(80, 80, 80)
-         glBegin(GL_QUADS) 
-         glVertex3f(-0.80,  0.80, -0.80)
-         glVertex3f(-1.00,  1.00,  0.80)
-         glVertex3f( 1.00,  1.00,  0.80)
-         glVertex3f( 0.80,  0.80, -0.80)
-         glEnd()
-
-         glColor3ub(80, 80, 80)
-         glBegin(GL_QUADS) 
-         glVertex3f(-0.80, -0.80, -0.80)
-         glVertex3f(-1.00, -1.00,  0.80)
-         glVertex3f( 1.00, -1.00,  0.80)
-         glVertex3f( 0.80, -0.80, -0.80)
-         glEnd()
-         self.G_personas.Rey()
-         if self.Scene_cont == 1:
-             self.G_personas.Rey()
-         elif self.Scene_cont == 2:
-             self.G_personas.Rey()
-             self.G_dialogos.cuadro_grande()
-             self.G_caras.Rey() 
-             font = GLUT_BITMAP_TIMES_ROMAN_24
-             glRasterPos2d(-0.1, 0.5) 
-             glColor3ub(70, 70, 255)
-             texto = self.Dialog.encode('cp1250')
-             glutBitmapString (font, texto)
-         glFlush()
+        glColor3ub(80, 80, 80)
+        glBegin(GL_QUADS) 
+        glVertex3f(-0.80, -0.80, -0.80)
+        glVertex3f(-1.00, -1.00,  0.80)
+        glVertex3f( 1.00, -1.00,  0.80)
+        glVertex3f( 0.80, -0.80, -0.80)
+        glEnd()
+        letras = list(self.Dialog)
+        self.G_personas.Rey()
+        if self.Scene_cont == 1:
+            self.G_personas.Rey()
+        elif self.Scene_cont == 2:
+            self.G_personas.Rey()
+            self.G_dialogos.cuadro_grande()
+            self.G_caras.Rey() 
+            font = GLUT_BITMAP_TIMES_ROMAN_24
+            glRasterPos2d(self.w, self.h) 
+            glColor3ub(70, 70, 255) 
+            if self.Dialog_cont < len(letras) and self.wrote == 0:
+                self.Dialog_For += letras[self.Dialog_cont]
+                self.Dialog_cont += 1
+            else:
+                 self.Dialog_cont = 0
+                 self.wrote  = 1
+            texto = self.Dialog_For.encode('cp1250')
+            glutBitmapString (font, texto)
+        elif self.Scene_cont == 3:
+            self.G_personas.Rey()
+            self.G_dialogos.cuadro_grande()
+            self.G_caras = Objetos.Caras(0.65,0.81,-1.35)
+            self.G_caras.Principito()
+            font = GLUT_BITMAP_TIMES_ROMAN_24
+            glRasterPos2d(self.w, self.h) 
+            glColor3ub(70, 70, 255) 
+            if self.Dialog_cont < len(letras) and self.wrote == 0:
+                self.Dialog_For += letras[self.Dialog_cont]
+                self.Dialog_cont += 1
+            else:
+                 self.Dialog_cont = 0
+                 self.wrote  = 1
+            texto = self.Dialog_For.encode('cp1250')
+            glutBitmapString (font, texto)
+        glFlush()
+        time.sleep(0.03);
