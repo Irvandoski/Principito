@@ -26,48 +26,43 @@ class Main(object):
         if key == chr(27):
             os._exit(1) 
             sys.exit()
-        if key == 'q' and self.nivel == 5:
+        if key == chr(32) and self.nivel == 5:
             glClearColor(0.027, 0.823, 0.835, 0.0)
             glutDisplayFunc(self.G_personas.Farolero)
             glutIdleFunc(self.G_personas.Farolero)
             glFlush()
             self.nivel +=1;
-        if key == 'q' and self.nivel == 4:
+        if key == chr(32) and self.nivel == 4:
             glClearColor(0.027, 0.823, 0.835, 0.0)
-            self.G_dialogos.Rey()
-            if self.G_escenas.Scene_cont == 1:
-                self.G_escenas.Dialog = self.G_dialogos.D1
-                self.G_escenas.Dialog_For = ""
-                self.G_escenas.wrote = 0
-            elif self.G_escenas.Scene_cont == 2:
-                self.G_escenas.Dialog = self.G_dialogos.D2
-                self.G_escenas.Dialog_For = ""
-                self.G_escenas.wrote = 0
-            elif self.G_escenas.Scene_cont == 3:
+            self.G_dialogos.SieteRey()
+            self.G_escenas.Dialog = self.G_dialogos.dialogos[self.G_escenas.Scene_cont-1]
+            self.G_escenas.Dialog_For = ""
+            self.G_escenas.wrote = 0
+            if self.G_escenas.Scene_cont  + 1 == len(self.G_dialogos.dialogos):
                 self.nivel +=1;
             self.G_escenas.Scene_cont += 1
             glutDisplayFunc(self.G_escenas.Cuarto)
             glutIdleFunc(self.G_escenas.Cuarto)
             glFlush()
-        if key == 'q' and self.nivel == 3:
+        if key == chr(32) and self.nivel == 3:
             glClearColor(0.027, 0.823, 0.835, 0.0)
             glutDisplayFunc(Objetos.CuadrosDeDialogo(0.40).cuadro_pequeño)
             glutIdleFunc(Objetos.CuadrosDeDialogo(0.40).cuadro_pequeño)
             glFlush()
             self.nivel +=1;
-        if key == 'q' and self.nivel == 2:
+        if key == chr(32) and self.nivel == 2:
             glClearColor(0.027, 0.823, 0.835, 0.0)
             glutDisplayFunc(self.G_personas.Silueta_2)
             glutIdleFunc(self.G_personas.Silueta_2)
             glFlush()
             self.nivel +=1;
-        if key == 'q' and self.nivel == 1:
+        if key == chr(32) and self.nivel == 1:
             glClearColor(0.027, 0.823, 0.835, 0.0)
             glutDisplayFunc(self.G_personas.Silueta_1)
             glutIdleFunc(self.G_personas.Silueta_1)
             glFlush()
             self.nivel +=1;
-        if key == 'q' and self.nivel == 0:
+        if key == chr(32) and self.nivel == 0:
             glClearColor(0.027, 0.823, 0.835, 0.0)
             glutDisplayFunc(self.G_escenas.desierto)
             glutIdleFunc(self.G_escenas.desierto)

@@ -141,11 +141,14 @@ class Escenas(object):
         glEnd()
         letras = list(self.Dialog)
         self.G_personas.Rey()
+        Rey = [2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38]
+        Principito = [3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39]
         if self.Scene_cont == 1:
             self.G_personas.Rey()
-        elif self.Scene_cont == 2:
+        elif self.Scene_cont in Rey:
             self.G_personas.Rey()
             self.G_dialogos.cuadro_grande()
+            self.G_caras = Objetos.Caras(0.65,0.80,-0.99)
             self.G_caras.Rey() 
             font = GLUT_BITMAP_TIMES_ROMAN_24
             glRasterPos2d(self.w, self.h) 
@@ -156,9 +159,9 @@ class Escenas(object):
             else:
                  self.Dialog_cont = 0
                  self.wrote  = 1
-            texto = self.Dialog_For.encode('cp1250')
+            texto = self.Dialog_For.encode('cp1252')
             glutBitmapString (font, texto)
-        elif self.Scene_cont == 3:
+        elif self.Scene_cont in Principito:
             self.G_personas.Rey()
             self.G_dialogos.cuadro_grande()
             self.G_caras = Objetos.Caras(0.65,0.81,-1.35)
@@ -172,7 +175,7 @@ class Escenas(object):
             else:
                  self.Dialog_cont = 0
                  self.wrote  = 1
-            texto = self.Dialog_For.encode('cp1250')
+            texto = self.Dialog_For.encode('cp1252')
             glutBitmapString (font, texto)
         glFlush()
         time.sleep(0.03);
