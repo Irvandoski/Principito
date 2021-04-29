@@ -89,7 +89,7 @@ class Escenas(object):
          glEnd()
          glFlush()
          
-    def Cuarto(self):
+    def Rey(self):
         glClear(GL_COLOR_BUFFER_BIT)
 
         glColor3ub(55, 55, 55)
@@ -139,6 +139,7 @@ class Escenas(object):
         glVertex3f( 1.00, -1.00,  0.80)
         glVertex3f( 0.80, -0.80, -0.80)
         glEnd()
+
         letras = list(self.Dialog)
         self.G_personas.Rey()
         Rey = [2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38]

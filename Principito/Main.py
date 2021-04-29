@@ -20,6 +20,7 @@ class Main(object):
         self.G_personas = Objetos.Personas(0.40, 0.00, 0.00)
         self.nivel = 0
         self.cont_dialog = 0
+    #CAMBIOS
     def keyPress(self,bkey,x,y):
         key = bkey.decode("utf-8")
         #SALIR
@@ -41,8 +42,8 @@ class Main(object):
             if self.G_escenas.Scene_cont  + 1 == len(self.G_dialogos.dialogos):
                 self.nivel +=1;
             self.G_escenas.Scene_cont += 1
-            glutDisplayFunc(self.G_escenas.Cuarto)
-            glutIdleFunc(self.G_escenas.Cuarto)
+            glutDisplayFunc(self.G_escenas.Rey)
+            glutIdleFunc(self.G_escenas.Rey)
             glFlush()
         if key == chr(32) and self.nivel == 3:
             glClearColor(0.027, 0.823, 0.835, 0.0)
@@ -75,14 +76,17 @@ class Main(object):
         glutInitWindowSize(160,90)
         glutInitWindowPosition(0,0)
         glutCreateWindow("Ventana")
+
         glutFullScreen()
+        glMatrixMode(GL_PROJECTION);
         glutDisplayFunc(self.G_principito_front.portada)
 
         #glutDisplayFunc(self.G_escenas.desierto)
         #glutIdleFunc(self.G_principito_front.principito)
         glutKeyboardFunc(self.keyPress)
         glClearColor(0.027, 0.823, 0.835, 0.0)
-        gluOrtho2D(-1.0, 1.0, -1.0, 1.0)
+        #gluOrtho2D(-1.0, 1.0, -1.0, 1.0)
+        glOrtho(-1.0, 1.0, -1.0, 1.0, -1, 1);
         glFlush()
         glutMainLoop()
         

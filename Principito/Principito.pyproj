@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>4f967a23-23db-422d-ac17-007b69acb0e7</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Main.py</StartupFile>
+    <StartupFile>flor.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -31,13 +31,19 @@
     <Compile Include="Main.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="module1.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="module2.py">
+    <Compile Include="flor.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Objetos.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="3Dmodel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="3Dmodel\Faro.bbmodel" />
+    <Content Include="3Dmodel\flor.bbmodel" />
+    <Content Include="3Dmodel\Poso.bbmodel" />
+    <Content Include="3Dmodel\Zorrito.bbmodel" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
