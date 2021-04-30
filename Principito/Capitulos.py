@@ -157,8 +157,9 @@ class Capitulos(object):
             self.G_caras = Personas.Caras(0.65,0.80,-0.99)
             self.G_caras.Rey() 
             font = GLUT_BITMAP_TIMES_ROMAN_24
+            glColor3ub(0,0,0) 
             glRasterPos2d(self.w, self.h) 
-            glColor3ub(70, 70, 255) 
+            
             if self.Dialog_cont < len(letras) and self.wrote == 0:
                 self.Dialog_For += letras[self.Dialog_cont]
                 self.Dialog_cont += 1
@@ -173,8 +174,9 @@ class Capitulos(object):
             self.G_caras = Personas.Caras(0.65,0.81,-1.35)
             self.G_caras.Principito()
             font = GLUT_BITMAP_TIMES_ROMAN_24
+            glColor3ub(0,0,0) 
             glRasterPos2d(self.w, self.h) 
-            glColor3ub(70, 70, 255) 
+            
             if self.Dialog_cont < len(letras) and self.wrote == 0:
                 self.Dialog_For += letras[self.Dialog_cont]
                 self.Dialog_cont += 1
