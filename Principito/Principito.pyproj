@@ -25,7 +25,7 @@
     <Compile Include="Dialogos.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Escenarios.py">
+    <Compile Include="Fondos.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Main.py">
@@ -34,7 +34,13 @@
     <Compile Include="flor.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Capitulos.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Objetos.py" />
+    <Compile Include="Personas.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="3Dmodel\" />
