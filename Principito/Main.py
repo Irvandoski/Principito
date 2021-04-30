@@ -20,6 +20,8 @@ class Main(object):
         self.cont_dialog = 0
         self.Thread_Music = threading.Thread();
         self.musica = pyglet.resource.media('Menu.mp3', streaming=True)
+        self.player=pyglet.media.Player()
+
     def keyPress(self,bkey,x,y):
         key = bkey.decode("utf-8")
         #SALIR
@@ -41,6 +43,10 @@ class Main(object):
             glutIdleFunc(self.G_capitulos.Rey)
             glFlush()
         if key == chr(32) and self.nivel == 0:
+            #Capitulo dos DESIERTO
+            #self.player.queue(pyglet.resource.media("01TemaDesierto.mp3", streaming=True))
+            self.player.next_source()
+            #self.player.play();
             glClearColor(0.027, 0.823, 0.835, 0.0)
             self.G_dialogos.UnoPiloto()
             self.G_capitulos.Dialog = self.G_dialogos.dialogos[self.G_capitulos.Scene_cont-1]
@@ -76,8 +82,15 @@ class Main(object):
         glFlush()
         glutMainLoop()
     def Music(self):
-        self.musica.play()
-        pyglet.app.run()
+        #source=pyglet.resource.media("Menu.mp3", streaming=True)
+        music = pyglet.media.load("Menu.mp3")
+        self.player.queue(music)
+        musik=pyglet.media.load("01TemaDesierto.mp3")
+        self.player.queue(musik)
+        #self.player.queue(pyglet.resource.media("01TemaDesierto.mp3", streaming=True))
+        self.player.play();
+        #self.musica.play()
+        #pyglet.app.run()
 
 View = Main();
 View.main();
