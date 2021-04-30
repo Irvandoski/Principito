@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>4f967a23-23db-422d-ac17-007b69acb0e7</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>flor.py</StartupFile>
+    <StartupFile>Main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
