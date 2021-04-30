@@ -7,6 +7,7 @@ import Capitulos
 import Dialogos
 import threading
 import time
+import pyglet
 
 class Main(object):
     def __init__(self):
@@ -17,11 +18,14 @@ class Main(object):
         self.G_dialogos = Dialogos.Dialogos()
         self.nivel = 0
         self.cont_dialog = 0
-
+        self.Thread_Music = threading.Thread();
+        self.musica = pyglet.resource.media('Menu.mp3', streaming=True)
     def keyPress(self,bkey,x,y):
         key = bkey.decode("utf-8")
         #SALIR
         if key == chr(27):
+            pyglet.app.exit()
+            self.musica.exit()
             os._exit(1) 
             sys.exit()
         if key == chr(32) and self.nivel == 1:
@@ -51,6 +55,8 @@ class Main(object):
 
     def main(self):
         
+        self.Thread_Music = threading.Thread(name="Music", target=self.Music)
+        self.Thread_Music.start();
         glutInit(sys.argv)
         glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB)
         glutInitWindowSize(160,90)
@@ -69,7 +75,10 @@ class Main(object):
         glOrtho(-1.0, 1.0, -1.0, 1.0, -1, 1);
         glFlush()
         glutMainLoop()
-        
+    def Music(self):
+        self.musica.play()
+        pyglet.app.run()
+
 View = Main();
 View.main();
 # End of Program
