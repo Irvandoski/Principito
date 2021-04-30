@@ -25,7 +25,7 @@ class Main(object):
         #SALIR
         if key == chr(27):
             pyglet.app.exit()
-            self.musica.exit()
+            self.Thread_Music.join()
             os._exit(1) 
             sys.exit()
         if key == chr(32) and self.nivel == 1:
