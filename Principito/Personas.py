@@ -259,7 +259,6 @@ class Personas(object):
         glVertex3f(-0.027 * self.escalaX + self.w, 0.699 * self.escalaY + self.h,0.01)
         glVertex3f( 0.050 * self.escalaX + self.w, 0.725 * self.escalaY + self.h,0.01)
         glEnd()
-        glFlush()
      def Silueta_1(self):
         glClear(GL_COLOR_BUFFER_BIT)
         #brazo derecho
@@ -333,7 +332,7 @@ class Personas(object):
         glVertex2f(-0.08 * self.escalaX + self.w, -0.08 * self.escalaY + self.h)
         glVertex2f(-0.11 * self.escalaX + self.w,  -0.12 * self.escalaY + self.h)
         glEnd()
-        glFlush()
+        
      def Silueta_2(self):
         glClear(GL_COLOR_BUFFER_BIT)
         #fondo cabello
@@ -424,7 +423,7 @@ class Personas(object):
         glVertex2f(-0.17 * self.escalaX + self.w, -0.05 * self.escalaY + self.h)
         glVertex2f(-0.22 * self.escalaX + self.w, -0.03 * self.escalaY + self.h)
         glEnd()
-        glFlush()
+        
      def Rey(self):
         #trono
         glColor3ub(151, 151, 151)
@@ -735,7 +734,7 @@ class Personas(object):
         glVertex2f( 0.07 * self.escalaX + self.w,  0.45 * self.escalaY + self.h)
         glVertex2f( 0.13 * self.escalaX + self.w,  0.39 * self.escalaY + self.h)
         glEnd()
-        glFlush()
+        
      def Geografo(self):
         glClear(GL_COLOR_BUFFER_BIT)
         #MOCHILA
@@ -928,7 +927,7 @@ class Personas(object):
         glVertex2f(-0.03 * self.escalaX + self.w, 0.57 * self.escalaY + self.h)
         glVertex2f( 0.02 * self.escalaX + self.w, 0.53 * self.escalaY + self.h)
         glEnd()
-        glFlush()
+        
 
 class Caras(object):
      def __init__(self,escalar,w,h):

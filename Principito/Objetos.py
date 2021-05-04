@@ -22,7 +22,6 @@ class Objetos():
         glVertex2f( 0.16 * self.escalaX, -0.25 * self.escalaY)
         glVertex2f( 0.20 * self.escalaX, -0.43 * self.escalaY)
         glEnd()
-        glFlush()
      def cuadro_grande(self):
         #fondo cabello
         glColor3ub(119, 66, 3)
@@ -47,4 +46,3 @@ class Objetos():
         glVertex2f( 0.88, -0.52)
         glVertex2f(-0.88, -0.52)
         glEnd()
-        glFlush()
