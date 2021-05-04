@@ -19,7 +19,7 @@ class Main(object):
         self.nivel = 0
         self.cont_dialog = 0
         self.Thread_Music = threading.Thread();
-        self.musica = pyglet.resource.media('Menu.mp3', streaming=True)
+        self.musica = pyglet.resource.media('00Menu.mp3', streaming=True)
         self.player=pyglet.media.Player()
         self.changed = False
     def keyPress(self,bkey,x,y):
@@ -79,7 +79,7 @@ class Main(object):
         glOrtho(-1.0, 1.0, -1.0, 1.0, -1, 1);
         glutMainLoop()
     def Music(self):
-        self.player.queue(pyglet.media.load("Menu.mp3"))
+        self.player.queue(pyglet.media.load("00Menu.mp3"))
         self.player.queue(pyglet.media.load("01TemaDesierto.mp3"))
         self.player.play();
         self.player.volume = 0.1
