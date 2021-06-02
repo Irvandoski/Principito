@@ -45,7 +45,7 @@ class Dialogos(object):
        self.dialogos.append( " Seguramente. y si eres amable te daré también una cuerda para atarlo durante el día. Y una estaca.")
        self.dialogos.append( "Atarlo? !Qué idea tan rara! ")
        self.dialogos.append( "Pero si no lo atas se irá a cualquier parte y se perderá... ")
-       self.dialogos.append( "_Pero, Adónde quieres que vaya? ")
+       self.dialogos.append( "Pero, Adónde quieres que vaya? ")
        self.dialogos.append( "A cualquier parte. Derecho, siempre adelante... ")
        self.dialogos.append( "No importa! Mi casa es muy pequeña... Delante, siempre adelante de uno... No se puede ir muy lejos. ")
         #NARRACIÓN
