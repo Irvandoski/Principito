@@ -57,9 +57,9 @@ class Dialogos(object):
        self.dialogos.append( "Esperar a que el sol se ponga. ")
        self.dialogos.append( "Me creo siempre en mi casa! ")
        self.dialogos.append( "... ")
-       self.dialogos.append( "... ")
+      # self.dialogos.append( "... ")
        self.dialogos.append( "Un día, vi ponerse el sol cuarenta y tres veces. ")
-       self.dialogos.append( ". ")
+       self.dialogos.append( "... ")
        self.dialogos.append( "Sabes?... Cuando uno está verdaderamente triste son agradables las puestas de sol. ")
        self.dialogos.append( "Estabas, pues, verdaderamente triste el día de las cuarenta y tres veces? ")
     def CuatroEspinas(self):
