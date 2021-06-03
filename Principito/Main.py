@@ -31,7 +31,7 @@ class Main(object):
             self.Thread_Music.join()
             os._exit(1) 
             sys.exit()
-        if key == chr(32) and self.nivel == 3:
+        if key == chr(32) and self.nivel == 6:
             glClearColor(0.027, 0.823, 0.835, 0.0)
             self.G_dialogos.SieteRey()
             self.G_capitulos.Dialog = self.G_dialogos.dialogos[self.G_capitulos.Scene_cont-1]
@@ -43,9 +43,13 @@ class Main(object):
             self.G_capitulos.Scene_cont += 1
             glutDisplayFunc(self.G_capitulos.Rey)
             glutIdleFunc(self.G_capitulos.Rey)
-        if key == chr(32) and self.nivel == 2:
+
+        #CAPITULO CUATRO
+        if key == chr(32) and self.nivel == 3:
             glClearColor(0.027, 0.823, 0.835, 0.0)
-            self.G_dialogos.TresPuesta()      
+
+            self.G_dialogos.CuatroEspinas()      
+            
             self.G_capitulos.Dialog = self.G_dialogos.dialogos[self.G_capitulos.Scene_cont-1] 
             self.G_capitulos.Dialog_For = ""
             self.G_capitulos.Dialog_cont = 0
@@ -54,14 +58,37 @@ class Main(object):
                 self.nivel +=1;
                 self.G_capitulos.Scene_cont = 0
             self.G_capitulos.Scene_cont += 1
+            
+            glutDisplayFunc(self.G_capitulos.Cap_Cuatro)
+            glutIdleFunc(self.G_capitulos.Cap_Cuatro)
+
+        #CAPITULO TRES
+        if key == chr(32) and self.nivel == 2:
+            glClearColor(0.027, 0.823, 0.835, 0.0)
+
+            self.G_dialogos.TresPuesta()      
+
+            self.G_capitulos.Dialog = self.G_dialogos.dialogos[self.G_capitulos.Scene_cont-1] 
+            self.G_capitulos.Dialog_For = ""
+            self.G_capitulos.Dialog_cont = 0
+            self.G_capitulos.wrote = 0
+            if self.G_capitulos.Scene_cont  + 1 == len(self.G_dialogos.dialogos):
+                self.nivel +=1;
+                self.G_capitulos.Scene_cont = 0
+            self.G_capitulos.Scene_cont += 1
+
             glutDisplayFunc(self.G_capitulos.Cap_Tres)
             glutIdleFunc(self.G_capitulos.Cap_Tres)
+
+        #CAPITULO DOS
         if key == chr(32) and self.nivel == 1:
             if self.changed == False:
                 self.player.next_source()
                 self.changed = True
             glClearColor(0.027, 0.823, 0.835, 0.0)
+
             self.G_dialogos.DosAvion()           
+
             self.G_capitulos.Dialog = self.G_dialogos.dialogos[self.G_capitulos.Scene_cont-1] 
             self.G_capitulos.Dialog_For = ""
             self.G_capitulos.Dialog_cont = 0
@@ -70,14 +97,19 @@ class Main(object):
                 self.nivel +=1;
                 self.G_capitulos.Scene_cont = 0
             self.G_capitulos.Scene_cont += 1
+
             glutDisplayFunc(self.G_capitulos.Cap_Dos)
             glutIdleFunc(self.G_capitulos.Cap_Dos)
+
+        #CAPITULO UNO
         if key == chr(32) and self.nivel == 0:
             if self.changed == False:
                 self.player.next_source()
                 self.changed = True
             glClearColor(0.027, 0.823, 0.835, 0.0)
+
             self.G_dialogos.UnoPiloto()
+
             self.G_capitulos.Dialog = self.G_dialogos.dialogos[self.G_capitulos.Scene_cont-1]
             self.G_capitulos.Dialog_For = ""
             self.G_capitulos.Dialog_cont = 0
@@ -86,6 +118,7 @@ class Main(object):
                 self.nivel +=1
                 self.G_capitulos.Scene_cont = 0
             self.G_capitulos.Scene_cont += 1
+
             glutDisplayFunc(self.G_capitulos.Cap_Uno)
             glutIdleFunc(self.G_capitulos.Cap_Uno)
             
