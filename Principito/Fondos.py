@@ -67,11 +67,11 @@ class Fondos(object):
     def DesiertoNoche(self):
         glClear(GL_COLOR_BUFFER_BIT)
 
-        glColor3ub(158, 239, 250)
+        glColor3ub(235, 141, 0)
         glBegin(GL_QUADS)
         glVertex2f(-1, -1)
         glVertex2f(-1,  1)
-        glColor3ub(77, 102, 255)
+        glColor3ub(75, 0, 156)
         glVertex2f( 1,  1)
         glVertex2f( 1, -1)
         glEnd()

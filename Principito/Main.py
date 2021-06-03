@@ -52,9 +52,10 @@ class Main(object):
             self.G_capitulos.wrote = 0
             if self.G_capitulos.Scene_cont  + 1 == len(self.G_dialogos.dialogos):
                 self.nivel +=1;
+                self.G_capitulos.Scene_cont = 0
             self.G_capitulos.Scene_cont += 1
-            glutDisplayFunc(self.G_capitulos.Cap_Dos)
-            glutIdleFunc(self.G_capitulos.Cap_Dos)
+            glutDisplayFunc(self.G_capitulos.Cap_Tres)
+            glutIdleFunc(self.G_capitulos.Cap_Tres)
         if key == chr(32) and self.nivel == 1:
             if self.changed == False:
                 self.player.next_source()
@@ -67,6 +68,7 @@ class Main(object):
             self.G_capitulos.wrote = 0
             if self.G_capitulos.Scene_cont  + 1 == len(self.G_dialogos.dialogos):
                 self.nivel +=1;
+                self.G_capitulos.Scene_cont = 0
             self.G_capitulos.Scene_cont += 1
             glutDisplayFunc(self.G_capitulos.Cap_Dos)
             glutIdleFunc(self.G_capitulos.Cap_Dos)

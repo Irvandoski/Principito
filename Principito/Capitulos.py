@@ -147,8 +147,7 @@ class Capitulos(object):
         glClear(GL_COLOR_BUFFER_BIT)
 
         self.G_personas = Personas.Personas(0.40, 0.40, -0.25)
-        self.G_fondos.Desierto()
-
+        self.G_fondos.DesiertoNoche()
         letras = list(self.Dialog)
         self.G_personas.Principito();
         Principito= [2,4,6,8,10,12,14,16,18]
