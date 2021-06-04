@@ -15,7 +15,7 @@ class Main(object):
         self.screen= ctypes.windll.user32
         self.width = self.screen.GetSystemMetrics(0)
         self.height = self.screen.GetSystemMetrics(1)
-        self.G_capitulos = Capitulos.Capitulos(-0.90,-0.70)
+        self.G_capitulos = Capitulos.Capitulos(-0.90,-0.70,0.0)
         self.G_dialogos = Dialogos.Dialogos()
         self.nivel = 0
         self.cont_dialog = 0
@@ -23,14 +23,37 @@ class Main(object):
         self.musica = pyglet.resource.media('00Menu.mp3', streaming=True)
         self.player=pyglet.media.Player()
         self.changed = False
+        self.RotarEnY = 0.0
+        self.RotarLuz = 0.0
+
     def keyPress(self,bkey,x,y):
         key = bkey.decode("utf-8")
         #SALIR
+        if key == "n":
+            self.nivel +=1;
         if key == chr(27):
             pyglet.app.exit()
             self.Thread_Music.join()
             os._exit(1) 
             sys.exit()
+            
+        #CAPITULO CINCO
+        if key == chr(32) and self.nivel == 5:
+            glClearColor(0.027, 0.823, 0.835, 0.0)
+
+            self.G_dialogos.CuatroEspinas()      
+            
+            self.G_capitulos.Dialog = self.G_dialogos.dialogos[self.G_capitulos.Scene_cont-1] 
+            self.G_capitulos.Dialog_For = ""
+            self.G_capitulos.Dialog_cont = 0
+            self.G_capitulos.wrote = 0
+            if self.G_capitulos.Scene_cont == len(self.G_dialogos.dialogos):
+                self.nivel +=1;
+                self.G_capitulos.Scene_cont = 0
+            self.G_capitulos.Scene_cont += 1
+            
+            glutDisplayFunc(self.G_capitulos.Cap_Cuatro)
+            glutIdleFunc(self.G_capitulos.Cap_Cuatro)
         if key == chr(32) and self.nivel == 6:
             glClearColor(0.027, 0.823, 0.835, 0.0)
             self.G_dialogos.SieteRey()
@@ -44,6 +67,46 @@ class Main(object):
             glutDisplayFunc(self.G_capitulos.Rey)
             glutIdleFunc(self.G_capitulos.Rey)
 
+        #CAPITULO CINCO
+        if key == chr(32) and self.nivel == 5:
+            
+            glutInitDisplayMode(GLUT_SINGLE |GLUT_RGB)
+            
+            glMatrixMode(GL_PROJECTION);
+            #gluOrtho2D(-1.0, 1.0, -1.0, 1.0)
+            glOrtho(-1.0, 1.0, -1.0, 1.0, -1, 1);
+       
+            glClearColor(0.027, 0.823, 0.835, 0.0)
+
+            self.G_dialogos.CuatroEspinas()      
+            
+            self.G_capitulos.Dialog = self.G_dialogos.dialogos[self.G_capitulos.Scene_cont-1] 
+            self.G_capitulos.Dialog_For = ""
+            self.G_capitulos.Dialog_cont = 0
+            self.G_capitulos.wrote = 0
+            if self.G_capitulos.Scene_cont == len(self.G_dialogos.dialogos):
+                self.nivel +=1;
+                self.G_capitulos.Scene_cont = 0
+            self.G_capitulos.Scene_cont += 1
+            
+            glutDisplayFunc(self.G_capitulos.Cap_Cinco)
+            glutIdleFunc(self.G_capitulos.Cap_Cinco)
+        #CLOSE UP FLOR
+        if key == chr(32) and self.nivel == 4:
+            
+            glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH)
+            glClearColor(0.0, 0.0, 0.0, 0.0)
+            glClearDepth(1.0)
+            glShadeModel(GL_SMOOTH)
+            glMatrixMode(GL_PROJECTION)
+            glLoadIdentity()
+            gluPerspective(45.0, float(1280)/float(720), 0.1, 100.0)
+            if self.G_capitulos.RotarEnY  >= 1000:
+                self.nivel +=1;
+                self.G_capitulos = Capitulos.Capitulos(-0.90,-0.70,self.RotarEnY)
+            glutDisplayFunc(self.G_capitulos.Close_Up_Flor)
+            glutIdleFunc(self.G_capitulos.Close_Up_Flor)
+            glMatrixMode(GL_MODELVIEW)
         #CAPITULO CUATRO
         if key == chr(32) and self.nivel == 3:
             glClearColor(0.027, 0.823, 0.835, 0.0)
@@ -54,7 +117,7 @@ class Main(object):
             self.G_capitulos.Dialog_For = ""
             self.G_capitulos.Dialog_cont = 0
             self.G_capitulos.wrote = 0
-            if self.G_capitulos.Scene_cont  + 1 == len(self.G_dialogos.dialogos):
+            if self.G_capitulos.Scene_cont == len(self.G_dialogos.dialogos):
                 self.nivel +=1;
                 self.G_capitulos.Scene_cont = 0
             self.G_capitulos.Scene_cont += 1
@@ -72,7 +135,7 @@ class Main(object):
             self.G_capitulos.Dialog_For = ""
             self.G_capitulos.Dialog_cont = 0
             self.G_capitulos.wrote = 0
-            if self.G_capitulos.Scene_cont  + 1 == len(self.G_dialogos.dialogos):
+            if self.G_capitulos.Scene_cont == len(self.G_dialogos.dialogos):
                 self.nivel +=1;
                 self.G_capitulos.Scene_cont = 0
             self.G_capitulos.Scene_cont += 1
@@ -93,7 +156,7 @@ class Main(object):
             self.G_capitulos.Dialog_For = ""
             self.G_capitulos.Dialog_cont = 0
             self.G_capitulos.wrote = 0
-            if self.G_capitulos.Scene_cont  + 1 == len(self.G_dialogos.dialogos):
+            if self.G_capitulos.Scene_cont == len(self.G_dialogos.dialogos):
                 self.nivel +=1;
                 self.G_capitulos.Scene_cont = 0
             self.G_capitulos.Scene_cont += 1
@@ -114,7 +177,7 @@ class Main(object):
             self.G_capitulos.Dialog_For = ""
             self.G_capitulos.Dialog_cont = 0
             self.G_capitulos.wrote = 0
-            if self.G_capitulos.Scene_cont  + 1 == len(self.G_dialogos.dialogos):
+            if self.G_capitulos.Scene_cont == len(self.G_dialogos.dialogos):
                 self.nivel +=1
                 self.G_capitulos.Scene_cont = 0
             self.G_capitulos.Scene_cont += 1
@@ -143,24 +206,24 @@ class Main(object):
         self.Thread_Music = threading.Thread(name="Music", target=self.Music)
         self.Thread_Music.start();
         glutInit(sys.argv)
-        if self.nivel == 0 or self.nivel == 1 or self.nivel == 2 or self.nivel == 3:
-            glutInitDisplayMode(GLUT_SINGLE |GLUT_RGB)
-            glutInitWindowSize(160,90)
-            glutInitWindowPosition(0,0)
-            glutCreateWindow("Ventana")
+        glutInitWindowSize(1280,720)
+        glutInitWindowPosition(0,0)
+        glutCreateWindow("Ventana")
+        glutFullScreen()
+        glutInitDisplayMode(GLUT_SINGLE |GLUT_RGB)
+            
+        glMatrixMode(GL_PROJECTION);
+        glutDisplayFunc(self.G_capitulos.Portada)
 
-            glutFullScreen()
-            glMatrixMode(GL_PROJECTION);
-            glutDisplayFunc(self.G_capitulos.Portada)
+        #glutDisplayFunc(self.G_capitulos.desierto)
+        #glutIdleFunc(self.G_principito_front.principito)
 
-            #glutDisplayFunc(self.G_capitulos.desierto)
-            #glutIdleFunc(self.G_principito_front.principito)
-            glutKeyboardFunc(self.keyPress)
-            glutSpecialFunc(self.keyOptions)
-            glClearColor(0.027, 0.823, 0.835, 0.0)
-            #gluOrtho2D(-1.0, 1.0, -1.0, 1.0)
-            glOrtho(-1.0, 1.0, -1.0, 1.0, -1, 1);
-        
+        glClearColor(0.027, 0.823, 0.835, 0.0)
+        #gluOrtho2D(-1.0, 1.0, -1.0, 1.0)
+        glOrtho(-1.0, 1.0, -1.0, 1.0, -1, 1);
+       
+        glutKeyboardFunc(self.keyPress)
+        glutSpecialFunc(self.keyOptions)
         glutMainLoop()
     def Music(self):
         self.player.queue(pyglet.media.load("00Menu.mp3"))

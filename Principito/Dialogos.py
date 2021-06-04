@@ -84,11 +84,11 @@ class Dialogos(object):
        self.dialogos.append( "De cosas serias!...Confundes todo!...Conozco un planeta donde vive un señor carmesí. Jamás ha querido a nadie.No ha hecho más que sumas y restas. Y todo el día repute como tú: 'Soy un hombre serio! Soy un hombre serio!' Se infla de orgullo. Pero no es un hombre, es, Es un hongo! ")
        self.dialogos.append( "Un qué? ")
        self.dialogos.append( "Un hongo! ")
-       self.dialogos.append( "Hace millones de años que las flores fabrican espinas. Hace millones de años que loscordetros comen igualmente las flores. Y no es serio intentar comprender por qué las flores se esfuerzan tanto en fabricar espinas que no sirven nunca para nada? No es importante la guerra de los corderos y las flores? No es ,as serio y mas importante que las sumas de un señor gordo y rojo? ")
+       self.dialogos.append( "Hace millones de años que las flores fabrican espinas. Hace millones de años que los cordetros comen igualmente las flores. Y no es serio intentar comprender por qué las flores se esfuerzan tanto en fabricar espinas que no sirven nunca para nada? No es importante la guerra de los corderos y las flores? No es ,as serio y mas importante que las sumas de un señor gordo y rojo? ")
        self.dialogos.append( "... ")
        self.dialogos.append( "Y no es importante que yo conozca una flor única en el mundo, que no existe en ninguna parte salvo mi planeta, y que un corderito puede aniquilar una mañana, así, de un solo golpe, sin darsecuenta de lo que hace?...Esto,No es importante? ")
        self.dialogos.append( "... ")
-       self.dialogos.append( "Si alguien ama una flor de las que no existe más, que un ejemplar entre millones y millones de estrellas, es bastanre para que sea feliz cuando mira las estrellas. se dice 'Mi flor está allí, en alguna parte...'Y si el cordero come la flor, para él es como si, bruscamente, todas las estrellas se apagaran. Y esto, No es importante? ")
+       self.dialogos.append( "Si alguien ama una flor de las que no existe más, que un ejemplar entre millones y millones de estrellas, es bastante para que sea feliz cuando mira las estrellas. se dice 'Mi flor está allí, en alguna parte...'Y si el cordero come la flor, para él es como si, bruscamente, todas las estrellas se apagaran. Y esto, No es importante? ")
         #NARRACIÓN -el principito llora :c-
     def CincoFlor(self):
        self.dialogos.clear()

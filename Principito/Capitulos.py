@@ -11,7 +11,8 @@ import time
 
 
 class Capitulos(object):
-    def __init__(self, w, h):
+    def __init__(self, w, h, RotarEnY):
+        self.RotarEnY = 0.0 
         self.escalaX = 1 
         self.escalaY = 16/9 
         self.G_personas = Personas.Personas(0.0, 0.0, 0.0)
@@ -192,6 +193,125 @@ class Capitulos(object):
         time.sleep(float(self.time)); 
 
     def Cap_Cuatro(self):
+        glClear(GL_COLOR_BUFFER_BIT)
+
+        self.G_personas = Personas.Personas(0.40, 0.40, -0.25)
+        self.G_fondos.Desierto()
+
+        letras = list(self.Dialog)
+        self.G_personas.Principito();
+        Principito= [2,4,6,8,10,12,14,15,17,19,21,23,24,26]
+        Aviador=[3,5,7,9,11,13,16,18,20,22,25]
+        if self.Scene_cont == 1:
+            self.G_personas.Principito()
+            self.G_objetos.Avioneta()
+        elif self.Scene_cont in Principito:
+            self.G_personas.Principito()
+            self.G_objetos.Avioneta()
+            self.G_objetos.cuadro_grande()
+            self.G_caras =Personas.Caras(0.65,0.81,-1.35)
+            self.G_caras.Principito()
+            font = GLUT_BITMAP_TIMES_ROMAN_24
+            glColor3ub(0,0,0) 
+            glRasterPos2d(self.w, self.h) 
+            if self.Dialog_cont < len(letras) and self.wrote == 0:
+                self.Dialog_For += letras[self.Dialog_cont]
+                self.Dialog_cont += 1
+            else:
+                 self.Dialog_cont = 0
+                 self.wrote  = 1
+            texto = self.Dialog_For.encode('cp1252')
+            glutBitmapString (font, texto)
+        elif self.Scene_cont in Aviador:
+            self.G_personas.Principito()
+            self.G_objetos.cuadro_grande()
+            font = GLUT_BITMAP_TIMES_ROMAN_24
+            glColor3ub(0,0,0) 
+            glRasterPos2d(self.w, self.h) 
+            
+            if self.Dialog_cont < len(letras) and self.wrote == 0:
+                self.Dialog_For += letras[self.Dialog_cont]
+                self.Dialog_cont += 1
+            else:
+                 self.Dialog_cont = 0
+                 self.wrote  = 1
+            texto = self.Dialog_For.encode('cp1252')
+            glutBitmapString (font, texto)
+        glFlush()
+        time.sleep(float(self.time)); 
+    
+    def Close_Up_Flor(self):
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
+        glLoadIdentity()
+        glClearColor(0.40, 0.58, 0.93, 0.0)
+        
+        #glLight(GL_LIGHT0, GL_POSITION,  (0, 0, 1, 0)) # directional light from the front
+        glLight(GL_LIGHT0, GL_POSITION,  (1, 15, 1, 1)) # point light from the left, top, front
+        glLightfv(GL_LIGHT0, GL_AMBIENT, (0.5, 0.5, 0.5, 1))
+        glLightfv(GL_LIGHT0, GL_DIFFUSE, (1, 1, 1, 1))
+
+        glEnable(GL_DEPTH_TEST) 
+        glEnable(GL_LIGHTING)
+        glEnable(GL_LIGHT0)
+        glEnable(GL_COLOR_MATERIAL)
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE )
+
+        glTranslatef(0.0, -1.0, -3.0)
+        glRotatef(self.RotarEnY,0.0,1.0,0.0)
+        self.G_objetos.Flor()
+        glScalef(-1,0,0)
+        glutSwapBuffers()
+        self.RotarEnY += 0.2 #Esta variable se usa para la rotacion
+        
+    def Cap_Cinco(self):
+        glClear(GL_COLOR_BUFFER_BIT)
+
+        self.G_personas = Personas.Personas(0.40, 0.40, -0.25)
+        self.G_fondos.Desierto()
+
+        letras = list(self.Dialog)
+        self.G_caras.Flor();
+        Principito= [2,4,6,8,10,12,14,15,17,19,21,23,24,26]
+        Aviador=[3,5,7,9,11,13,16,18,20,22,25]
+        if self.Scene_cont == 1:
+            self.G_caras.Flor()
+            self.G_objetos.Avioneta()
+        elif self.Scene_cont in Principito:
+            self.G_caras.Flor()
+            self.G_objetos.Avioneta()
+            self.G_objetos.cuadro_grande()
+            self.G_caras =Personas.Caras(0.65,0.81,-1.35)
+            self.G_caras.Principito()
+            font = GLUT_BITMAP_TIMES_ROMAN_24
+            glColor3ub(0,0,0) 
+            glRasterPos2d(self.w, self.h) 
+            if self.Dialog_cont < len(letras) and self.wrote == 0:
+                self.Dialog_For += letras[self.Dialog_cont]
+                self.Dialog_cont += 1
+            else:
+                 self.Dialog_cont = 0
+                 self.wrote  = 1
+            texto = self.Dialog_For.encode('cp1252')
+            glutBitmapString (font, texto)
+        elif self.Scene_cont in Aviador:
+            self.G_caras.Flor()
+            self.G_objetos.Avioneta()
+            self.G_objetos.cuadro_grande()
+            font = GLUT_BITMAP_TIMES_ROMAN_24
+            glColor3ub(0,0,0) 
+            glRasterPos2d(self.w, self.h) 
+            
+            if self.Dialog_cont < len(letras) and self.wrote == 0:
+                self.Dialog_For += letras[self.Dialog_cont]
+                self.Dialog_cont += 1
+            else:
+                 self.Dialog_cont = 0
+                 self.wrote  = 1
+            texto = self.Dialog_For.encode('cp1252')
+            glutBitmapString (font, texto)
+        glFlush()
+        time.sleep(float(self.time)); 
+    def Cap_Seis(self):
         glClear(GL_COLOR_BUFFER_BIT)
 
         self.G_personas = Personas.Personas(0.40, 0.40, -0.25)
