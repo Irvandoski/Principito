@@ -84,11 +84,11 @@ class Dialogos(object):
        self.dialogos.append( "De cosas serias!...Confundes todo!...Conozco un planeta donde vive un señor carmesí. Jamás ha querido a nadie.No ha hecho más que sumas y restas. Y todo el día repute como tú: 'Soy un hombre serio! Soy un hombre serio!' Se infla de orgullo. Pero no es un hombre, es, Es un hongo! ")
        self.dialogos.append( "Un qué? ")
        self.dialogos.append( "Un hongo! ")
-       self.dialogos.append( "Hace millones de años que las flores fabrican espinas. Hace millones de años que loscordetros comen igualmente las flores. Y no es serio intentar comprender por qué las flores se esfuerzan tanto en fabricar espinas que no sirven nunca para nada? No es importante la guerra de los corderos y las flores? No es ,as serio y mas importante que las sumas de un señor gordo y rojo? ")
+       self.dialogos.append( "Hace millones de años que las flores fabrican espinas. Hace millones de años que los cordetros comen igualmente las flores. Y no es serio intentar comprender por qué las flores se esfuerzan tanto en fabricar espinas que no sirven nunca para nada? No es importante la guerra de los corderos y las flores? No es ,as serio y mas importante que las sumas de un señor gordo y rojo? ")
        self.dialogos.append( "... ")
        self.dialogos.append( "Y no es importante que yo conozca una flor única en el mundo, que no existe en ninguna parte salvo mi planeta, y que un corderito puede aniquilar una mañana, así, de un solo golpe, sin darsecuenta de lo que hace?...Esto,No es importante? ")
        self.dialogos.append( "... ")
-       self.dialogos.append( "Si alguien ama una flor de las que no existe más, que un ejemplar entre millones y millones de estrellas, es bastanre para que sea feliz cuando mira las estrellas. se dice 'Mi flor está allí, en alguna parte...'Y si el cordero come la flor, para él es como si, bruscamente, todas las estrellas se apagaran. Y esto, No es importante? ")
+       self.dialogos.append( "Si alguien ama una flor de las que no existe más, que un ejemplar entre millones y millones de estrellas, es bastante para que sea feliz cuando mira las estrellas. se dice 'Mi flor está allí, en alguna parte...'Y si el cordero come la flor, para él es como si, bruscamente, todas las estrellas se apagaran. Y esto, No es importante? ")
         #NARRACIÓN -el principito llora :c-
     def CincoFlor(self):
        self.dialogos.clear()
@@ -104,15 +104,15 @@ class Dialogos(object):
        self.dialogos.append( "Eh, si, claro... ")
        self.dialogos.append( "Por la noche me meterás bajo un globo. Aquí hace mucho frío. Hay pocas comodidades. Allá de donde vengo...mmm...bueno...Y el biomo? ")
        self.dialogos.append( "Lo iba a buscar! Pero como me estabas hablando... ")
-        #Esto se lo dice al piloto
        self.dialogos.append( "No debí haberla escuchado, Nunca hay que escuchar a las flores, hay que mirarlas y aspirar su aroma. La mía perfumaba mi planeta, pero yo no podía gozar con ello. La historia de las garras, que tanto me había fastidiado, debe haberme enternecido... ")
        self.dialogos.append( "Entiendo. ")
+       #Esto se lo dice al piloto
        self.dialogos.append( "No supe comprender nada entonces. Debí haberla juzgado por sus actos y no por sus palabras. Me perfumaba e iluminada. No debí haber huido jamás! Debí haber adivinado su ternura, detrás de sus pobres astucias. Las flores son tan contradictorias! Pero yo era demasaido joven para saber amarla.")
     #NARRACIÓN
     def SeisByeFlor(self):
        self.dialogos.clear()
-       self.dialogos.append( "Adiós. ")
-       self.dialogos.append( "Adiós ")
+       self.dialogos.append( "Adiós.")
+       self.dialogos.append( "Adiós.")
        self.dialogos.append( "*He...He sido tonta...Te pido perdón. Procura ser feliz. ")
        self.dialogos.append( "... ")
        self.dialogos.append( "Pero...Sí, te quiero. No has sabido nada, por mi culpa. No tiene importancia. Pero has sido tan tonto como yo. Procura ser Feliz...Deja el globo en paz. No lo quiero más. ")
@@ -122,7 +122,7 @@ class Dialogos(object):
        self.dialogos.append( "Es preciso que soporte dos o tres orugas si quiero conocer las mariposas. Parece que es tan hermoso! si no, Quién habrá de visitarme? Tú estarás lejos. En cuantto los animales grandes, no les temo. Tengo mis garras. ")
        self.dialogos.append( "... ")
        self.dialogos.append( "No te detengas, has decidido partir. Vete. ")
-       self.dialogos.append( " ")
+       self.dialogos.append( "...")
         #NARRACIÓN -creo-
     def SieteRey(self):
        self.dialogos.clear()
@@ -266,33 +266,6 @@ class Dialogos(object):
        self.dialogos.append( "Es no tener suerte ")
        self.dialogos.append( "Es no tener suerte...Buenos días. ")
        self.dialogos.append( "Éste es el único de quien pude haberme hecho amigo. Pero su planeta es verdaderamente demasiado pequeño. No hay lugar para dos... ")
-    def DoceFarolero(self):
-        #NARRACIÓN DE LO QUE HACE EL FAROLERO
-        self.dialogos.clear()
-        self.dialogos.append(  "Tal vez este hombre es absurdo. Sin embargo, es menos absurdo que el rey, que el vanidoso, que el hombre de negocios y que el bebedor. Por lo menos su trabajo tiene sentido. Cuando enciende el farol es como si hiciera nacer una estrella más, o una flor. Cuando apaga el farol, hace dormir a la flor o a la estrella. Es una ocupación muy linda. Es verdaderamente útil porque es linda.")
-        self.dialogos.append(  "Buenos días. Por qué acabas de apagar el farol? ")
-        self.dialogos.append(  "Es la consigna.  Buenos días. ")
-        self.dialogos.append(  "Qué es la consigna? ")
-        self.dialogos.append(  "Apagar el farol. Buenas noches.  ")
-        self.dialogos.append(  "Pero, por qué acabas de encenderlo? ")
-        self.dialogos.append(  "Es la consigna ")
-        self.dialogos.append(  "No comprendo ")
-        self.dialogos.append(  "No hay nada que comprender.  La consigna es la consigna. Buenos días...Tengo un oficio terrible. Antes era razonable. Apagaba por la mañana y encendía por la noche. Tenía el resto del día para descansar, y el resto de la noche para dormir... ")
-        self.dialogos.append(  "Y después de esa época, la consigna cambió? ")
-        self.dialogos.append(  "La consigna no ha cambiado. Ahí está el drama! De año en año el planeta gira más rápido y la consigna no ha cambiado ")
-        self.dialogos.append(  "Entonces? ")
-        self.dialogos.append(  "Entonces, ahora que da una vuelta por minuto, no tengo un segundo de descanso. Enciendo y apago una vez por minuto. ")
-        self.dialogos.append(  "Qué raro! En tu planeta los días duran un minuto! ")
-        self.dialogos.append(  "No es raro en absoluto. Hace ya un mes que estamos hablando juntos. ")
-        self.dialogos.append(  "Un mes? ")
-        self.dialogos.append(  "Sí. Treinta minutos. Treinta días! Buenas noches. ")
-        self.dialogos.append(  "Sabes?..., conozco un medio para que descanses cuando quieras... ")
-        self.dialogos.append(  "Siempre quiero ")
-        self.dialogos.append(  "Tu planeta es tan pequeño que puedes recorrerlo en tres zancadas. No tienes más que caminar bastante lentamente para quedar siempre al sol. Cuando quieras descansar, caminarás... y el día durará tanto tiempo como quieras. ")
-        self.dialogos.append(  "Con eso no adelanto gran cosa. Lo que me gusta en la vida es dormir. ")
-        self.dialogos.append(  "Es no tener suerte ")
-        self.dialogos.append(  "Es no tener suerte...Buenos días. ")
-        self.dialogos.append(  "Éste es el único de quien pude haberme hecho amigo. Pero su planeta es verdaderamente demasiado pequeño. No hay lugar para dos... ")
         #NARRACIÓN
     def TreceGeografo(self):
         self.dialogos.clear()

@@ -46,9 +46,9 @@
     <Folder Include="3Dmodel\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="04Flor.mp3" />
-    <Content Include="05Rey.mp3" />
-    <Content Include="06Banidoso.mp3" />
+    <Content Include="02Flor.mp3" />
+    <Content Include="03Rey.mp3" />
+    <Content Include="04Banidoso.mp3" />
     <Content Include="07Ebrio.mp3" />
     <Content Include="08BuisnessMen.mp3" />
     <Content Include="09Farolero.mp3" />
