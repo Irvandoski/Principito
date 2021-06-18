@@ -12,6 +12,7 @@ class Personas(object):
         self.escalaY = 16/9 * escalar
         self.w = w
         self.h = h
+
     def Principito(self):
         #SOLAPA ROJA
         glColor3ub(181, 54, 65)
@@ -259,6 +260,7 @@ class Personas(object):
         glVertex3f(-0.027 * self.escalaX + self.w, 0.699 * self.escalaY + self.h,0.01)
         glVertex3f( 0.050 * self.escalaX + self.w, 0.725 * self.escalaY + self.h,0.01)
         glEnd()
+
     def Silueta_1(self):
         
         #brazo derecho
@@ -332,6 +334,7 @@ class Personas(object):
         glVertex2f(-0.08 * self.escalaX + self.w, -0.08 * self.escalaY + self.h)
         glVertex2f(-0.11 * self.escalaX + self.w,  -0.12 * self.escalaY + self.h)
         glEnd()     
+
     def Silueta_2(self):
         
         #fondo cabello
@@ -422,6 +425,7 @@ class Personas(object):
         glVertex2f(-0.17 * self.escalaX + self.w, -0.05 * self.escalaY + self.h)
         glVertex2f(-0.22 * self.escalaX + self.w, -0.03 * self.escalaY + self.h)
         glEnd()
+
     def Rey(self):
         #trono
         glColor3ub(151, 151, 151)
@@ -598,6 +602,7 @@ class Personas(object):
         glVertex2f( 0.27 * self.escalaX + self.w,  0.10 * self.escalaY + self.h)
         glVertex2f( 0.21 * self.escalaX + self.w,  0.07 * self.escalaY + self.h)
         glEnd()
+
     def Farolero(self):
         
         #camisa
@@ -732,6 +737,7 @@ class Personas(object):
         glVertex2f( 0.07 * self.escalaX + self.w,  0.45 * self.escalaY + self.h)
         glVertex2f( 0.13 * self.escalaX + self.w,  0.39 * self.escalaY + self.h)
         glEnd()     
+
     def Geografo(self):
         
         #MOCHILA
@@ -924,6 +930,7 @@ class Personas(object):
         glVertex2f(-0.03 * self.escalaX + self.w, 0.57 * self.escalaY + self.h)
         glVertex2f( 0.02 * self.escalaX + self.w, 0.53 * self.escalaY + self.h)
         glEnd()
+
     def Vanidoso(self):
         #CARA
         glBegin(GL_POLYGON)
@@ -1083,6 +1090,7 @@ class Personas(object):
         glVertex2f( 0.26 * self.escalaX + self.w,-0.20 * self.escalaY + self.h)
         glVertex2f( 0.40 * self.escalaX + self.w,-0.22 * self.escalaY + self.h)
         glEnd() 
+
     def HombreDeNegocios(self):
         #MANOS
         glColor3ub(255,214,141)
@@ -1216,12 +1224,221 @@ class Personas(object):
         glVertex2f(-0.27 * self.escalaX + self.w, 0.24 * self.escalaY + self.h)
         glVertex2f(-0.18 * self.escalaX + self.w, 0.00 * self.escalaY + self.h)
         glEnd()
+        
+    def Ebrio(self):
+        #PAPOS
+        glColor3ub(5,123,167)
+        glBegin(GL_POLYGON)
+        glVertex2f( 0.06 * self.escalaX + self.w,-0.58 * self.escalaY + self.h)
+        glVertex2f(-0.04 * self.escalaX + self.w,-0.56 * self.escalaY + self.h)
+        glVertex2f( 0.03 * self.escalaX + self.w,-0.52 * self.escalaY + self.h)
+        glVertex2f( 0.12 * self.escalaX + self.w,-0.49 * self.escalaY + self.h)
+        glVertex2f( 0.18 * self.escalaX + self.w,-0.55 * self.escalaY + self.h)
+        glEnd()
+        glBegin(GL_POLYGON)
+        glVertex2f(-0.09 * self.escalaX + self.w,-0.51 * self.escalaY + self.h)
+        glVertex2f(-0.17 * self.escalaX + self.w,-0.53 * self.escalaY + self.h)
+        glVertex2f(-0.28 * self.escalaX + self.w,-0.52 * self.escalaY + self.h)
+        glVertex2f(-0.24 * self.escalaX + self.w,-0.4775 * self.escalaY + self.h)
+        glVertex2f(-0.14 * self.escalaX + self.w,-0.44 * self.escalaY + self.h)
+        glEnd()
+        #PANTALON
+        glColor3ub(0,156,215)
+        glBegin(GL_POLYGON)
+        glVertex2f(-0.20 * self.escalaX + self.w,-0.15 * self.escalaY + self.h)
+        glVertex2f(-0.22 * self.escalaX + self.w,-0.30 * self.escalaY + self.h)
+        glVertex2f(-0.20 * self.escalaX + self.w,-0.47 * self.escalaY + self.h)
+        glVertex2f(-0.10 * self.escalaX + self.w,-0.47 * self.escalaY + self.h)
+        glVertex2f(-0.095 * self.escalaX + self.w,-0.30 * self.escalaY + self.h)
+        glVertex2f(-0.08 * self.escalaX + self.w,-0.21 * self.escalaY + self.h)
+        glVertex2f( 0.03 * self.escalaX + self.w,-0.21 * self.escalaY + self.h)
+        glVertex2f( 0.20 * self.escalaX + self.w,-0.03 * self.escalaY + self.h)
+        glVertex2f(-0.25 * self.escalaX + self.w,-0.03 * self.escalaY + self.h)
+        glEnd()
+        glBegin(GL_POLYGON)
+        glVertex2f( 0.03 * self.escalaX + self.w,-0.21 * self.escalaY + self.h)
+        glVertex2f( 0.20 * self.escalaX + self.w,-0.03 * self.escalaY + self.h)
+        glVertex2f( 0.145 * self.escalaX + self.w,-0.32 * self.escalaY + self.h)
+        glVertex2f( 0.16 * self.escalaX + self.w,-0.50 * self.escalaY + self.h)
+        glVertex2f( 0.05 * self.escalaX + self.w,-0.50 * self.escalaY + self.h)
+        glVertex2f( 0.02 * self.escalaX + self.w,-0.32 * self.escalaY + self.h)
+        glEnd()
+        #CUERPO 
+        glColor3ub(255,211,0)
+        glBegin(GL_POLYGON)
+        glVertex2f( 0.12 * self.escalaX + self.w,-0.06 * self.escalaY + self.h)
+        glVertex2f( 0.13 * self.escalaX + self.w,-0.10 * self.escalaY + self.h)
+        glVertex2f( 0.12 * self.escalaX + self.w,-0.20 * self.escalaY + self.h)
+        glVertex2f( 0.17 * self.escalaX + self.w,-0.22 * self.escalaY + self.h)
+        glVertex2f( 0.23 * self.escalaX + self.w,-0.16 * self.escalaY + self.h)
+        glVertex2f( 0.21 * self.escalaX + self.w,-0.12 * self.escalaY + self.h)
+        glVertex2f( 0.275 * self.escalaX + self.w, 0.06 * self.escalaY + self.h)
+        glVertex2f( 0.23 * self.escalaX + self.w, 0.22 * self.escalaY + self.h)
+        glVertex2f( 0.03 * self.escalaX + self.w, 0.36 * self.escalaY + self.h)
+        glVertex2f(-0.15 * self.escalaX + self.w, 0.25 * self.escalaY + self.h)
+        glVertex2f(-0.26 * self.escalaX + self.w, 0.10 * self.escalaY + self.h)
+        glVertex2f(-0.33 * self.escalaX + self.w, 0.09 * self.escalaY + self.h)
+        glVertex2f(-0.33 * self.escalaX + self.w, 0.08 * self.escalaY + self.h)
+        glVertex2f(-0.40 * self.escalaX + self.w, 0.08 * self.escalaY + self.h)
+        glVertex2f(-0.40 * self.escalaX + self.w,-0.02 * self.escalaY + self.h)
+        glVertex2f(-0.26 * self.escalaX + self.w,-0.03 * self.escalaY + self.h)
+        glVertex2f(-0.15 * self.escalaX + self.w,-0.08 * self.escalaY + self.h)
+        glEnd()
+        #CAMISA 
+        glColor3ub(255,151,106)
+        glBegin(GL_POLYGON)
+        glVertex2f(-0.13 * self.escalaX + self.w, 0.00 * self.escalaY + self.h)
+        glVertex2f(-0.26 * self.escalaX + self.w,-0.03 * self.escalaY + self.h)
+        glVertex2f(-0.24 * self.escalaX + self.w, 0.05 * self.escalaY + self.h)
+        glVertex2f(-0.19 * self.escalaX + self.w, 0.10 * self.escalaY + self.h)
+        glVertex2f(-0.19 * self.escalaX + self.w, 0.17 * self.escalaY + self.h)
+        glVertex2f(-0.23 * self.escalaX + self.w, 0.18 * self.escalaY + self.h)
+        glVertex2f(-0.21 * self.escalaX + self.w, 0.23 * self.escalaY + self.h)
+        glVertex2f( 0.03 * self.escalaX + self.w, 0.36 * self.escalaY + self.h)
+        glVertex2f( 0.22 * self.escalaX + self.w, 0.26 * self.escalaY + self.h)
+        glVertex2f( 0.24 * self.escalaX + self.w, 0.20 * self.escalaY + self.h)
+        glVertex2f( 0.16 * self.escalaX + self.w, 0.19 * self.escalaY + self.h)
+        glVertex2f( 0.10 * self.escalaX + self.w, 0.15 * self.escalaY + self.h)
+        glVertex2f( 0.07 * self.escalaX + self.w, 0.13 * self.escalaY + self.h)
+        glVertex2f( 0.12 * self.escalaX + self.w,-0.06 * self.escalaY + self.h)
+        glEnd()
+        #VASO
+        glColor3ub(205,205,205)
+        glBegin(GL_QUADS)
+        glVertex2f(-0.52 * self.escalaX + self.w,-0.07 * self.escalaY + self.h)
+        glVertex2f(-0.51 * self.escalaX + self.w, 0.15 * self.escalaY + self.h)
+        glVertex2f(-0.38 * self.escalaX + self.w, 0.15 * self.escalaY + self.h)
+        glVertex2f(-0.37 * self.escalaX + self.w,-0.07 * self.escalaY + self.h)
+        glColor3ub(255,211,0)
+        glVertex2f(-0.39 * self.escalaX + self.w,-0.02 * self.escalaY + self.h)
+        glVertex2f(-0.50 * self.escalaX + self.w,-0.02 * self.escalaY + self.h)
+        glVertex2f(-0.49 * self.escalaX + self.w, 0.08 * self.escalaY + self.h)
+        glVertex2f(-0.40 * self.escalaX + self.w, 0.08 * self.escalaY + self.h)
+        glEnd()
+        
+        #CARA
+        glBegin(GL_POLYGON)
+        glVertex2f(-0.13 * self.escalaX + self.w, 0.48 * self.escalaY + self.h)
+        glVertex2f(-0.265 * self.escalaX + self.w, 0.42 * self.escalaY + self.h)
+        glVertex2f(-0.26 * self.escalaX + self.w, 0.34 * self.escalaY + self.h)
+        glVertex2f(-0.30 * self.escalaX + self.w, 0.30 * self.escalaY + self.h)
+        glVertex2f(-0.26 * self.escalaX + self.w, 0.28 * self.escalaY + self.h)
+        glVertex2f(-0.18 * self.escalaX + self.w, 0.30 * self.escalaY + self.h)
+        glVertex2f(-0.19 * self.escalaX + self.w, 0.28 * self.escalaY + self.h)
+        glVertex2f(-0.13 * self.escalaX + self.w, 0.24 * self.escalaY + self.h)
+        glVertex2f(-0.11 * self.escalaX + self.w, 0.10 * self.escalaY + self.h)
+        glVertex2f( 0.01 * self.escalaX + self.w, 0.24 * self.escalaY + self.h)
+        glVertex2f( 0.03 * self.escalaX + self.w, 0.36 * self.escalaY + self.h)
+        glVertex2f(-0.05 * self.escalaX + self.w, 0.45 * self.escalaY + self.h)
+        glEnd()
+        #CABELLO
+        glColor3ub(110,63,11)
+        glBegin(GL_POLYGON)
+        glVertex2f(-0.10 * self.escalaX + self.w, 0.50 * self.escalaY + self.h)
+        glVertex2f(-0.20 * self.escalaX + self.w, 0.53 * self.escalaY + self.h)
+        glVertex2f(-0.19 * self.escalaX + self.w, 0.48 * self.escalaY + self.h)
+        glVertex2f(-0.265 * self.escalaX + self.w, 0.42 * self.escalaY + self.h)
+        glVertex2f(-0.12 * self.escalaX + self.w, 0.45 * self.escalaY + self.h)
+        glVertex2f(-0.105 * self.escalaX + self.w, 0.42 * self.escalaY + self.h)
+        glVertex2f(-0.09 * self.escalaX + self.w, 0.44 * self.escalaY + self.h)
+        glVertex2f( 0.03 * self.escalaX + self.w, 0.36 * self.escalaY + self.h)
+        glVertex2f(-0.03 * self.escalaX + self.w, 0.46 * self.escalaY + self.h)
+        glVertex2f( 0.00 * self.escalaX + self.w, 0.49 * self.escalaY + self.h)
+        glEnd()
+                
+    def Zorro(self):
+        #COLA
+        glColor3ub(255,127,0)
+        glBegin(GL_POLYGON)
+        glVertex2f( 0.30 * self.escalaX + self.w,-0.40 * self.escalaY + self.h)
+        glVertex2f( 0.41 * self.escalaX + self.w,-0.32 * self.escalaY + self.h)
+        glVertex2f( 0.47 * self.escalaX + self.w,-0.09 * self.escalaY + self.h)
+        glVertex2f( 0.35 * self.escalaX + self.w, 0.05 * self.escalaY + self.h)
+        glVertex2f( 0.23 * self.escalaX + self.w,-0.10 * self.escalaY + self.h)
+        glVertex2f( 0.255 * self.escalaX + self.w,-0.34 * self.escalaY + self.h)
+        glVertex2f( 0.185 * self.escalaX + self.w,-0.40 * self.escalaY + self.h)
+        glVertex2f( 0.07 * self.escalaX + self.w,-0.37 * self.escalaY + self.h)
+        glVertex2f( 0.07 * self.escalaX + self.w,-0.41 * self.escalaY + self.h)
+        glVertex2f( 0.21 * self.escalaX + self.w,-0.44 * self.escalaY + self.h)
+        glEnd()
+        glColor3ub(250,250,250)
+        glBegin(GL_POLYGON)
+        glVertex2f( 0.41 * self.escalaX + self.w,-0.17 * self.escalaY + self.h)
+        glVertex2f( 0.47 * self.escalaX + self.w,-0.09 * self.escalaY + self.h)
+        glVertex2f( 0.32 * self.escalaX + self.w, 0.18 * self.escalaY + self.h)
+        glVertex2f( 0.34 * self.escalaX + self.w, 0.10 * self.escalaY + self.h)
+        glVertex2f( 0.23 * self.escalaX + self.w,-0.10 * self.escalaY + self.h)
+        glVertex2f( 0.27 * self.escalaX + self.w,-0.17 * self.escalaY + self.h)
+        glEnd()
+        #CUERPO
+        glColor3ub(255,127,0)
+        glBegin(GL_POLYGON)
+        glVertex2f( 0.03 * self.escalaX + self.w,-0.49 * self.escalaY + self.h)
+        glVertex2f( 0.15 * self.escalaX + self.w,-0.30 * self.escalaY + self.h)
+        glVertex2f( 0.00 * self.escalaX + self.w, 0.10 * self.escalaY + self.h)
+        glVertex2f(-0.16 * self.escalaX + self.w, 0.00 * self.escalaY + self.h)
+        glVertex2f(-0.22 * self.escalaX + self.w,-0.32 * self.escalaY + self.h)
+        glVertex2f(-0.10 * self.escalaX + self.w,-0.49 * self.escalaY + self.h)
+        glEnd()
+        #PATAS
+        glColor3ub(10,0,0)
+        glBegin(GL_QUAD_STRIP)
+        glVertex2f(-0.10 * self.escalaX + self.w,-0.40 * self.escalaY + self.h)
+        glVertex2f(-0.06 * self.escalaX + self.w,-0.37 * self.escalaY + self.h)
+        glVertex2f(-0.08 * self.escalaX + self.w,-0.44 * self.escalaY + self.h)
+        glVertex2f( 0.005 * self.escalaX + self.w,-0.47 * self.escalaY + self.h)
+        glVertex2f(-0.16 * self.escalaX + self.w,-0.47 * self.escalaY + self.h)
+        glVertex2f(-0.15 * self.escalaX + self.w,-0.50 * self.escalaY + self.h)
+        glEnd()
+        glBegin(GL_QUADS)
+        glVertex2f(-0.195 * self.escalaX + self.w,-0.24 * self.escalaY + self.h)
+        glVertex2f(-0.13 * self.escalaX + self.w,-0.30 * self.escalaY + self.h)
+        glVertex2f(-0.20 * self.escalaX + self.w,-0.50 * self.escalaY + self.h)
+        glVertex2f(-0.25 * self.escalaX + self.w,-0.50 * self.escalaY + self.h)
+        glEnd()
+        #CARA   
+        glColor3ub(250,250,250)
+        glBegin(GL_QUADS)
+        glVertex2f(-0.17 * self.escalaX + self.w,-0.03 * self.escalaY + self.h)
+        glVertex2f(-0.41 * self.escalaX + self.w, 0.12 * self.escalaY + self.h)
+        glVertex2f(-0.13 * self.escalaX + self.w, 0.28 * self.escalaY + self.h)
+        glVertex2f( 0.14 * self.escalaX + self.w, 0.08 * self.escalaY + self.h)
+        glEnd()
+        glColor3ub(255,127,0)
+        glBegin(GL_POLYGON)
+        glVertex2f(-0.23 * self.escalaX + self.w, 0.18 * self.escalaY + self.h)
+        glVertex2f(-0.34 * self.escalaX + self.w, 0.17 * self.escalaY + self.h)
+        glVertex2f(-0.28 * self.escalaX + self.w, 0.27 * self.escalaY + self.h)
+        glVertex2f(-0.24 * self.escalaX + self.w, 0.41 * self.escalaY + self.h)
+        glVertex2f(-0.18 * self.escalaX + self.w, 0.32 * self.escalaY + self.h)
+        glVertex2f(-0.07 * self.escalaX + self.w, 0.31 * self.escalaY + self.h)
+        glVertex2f( 0.01 * self.escalaX + self.w, 0.40 * self.escalaY + self.h)
+        glVertex2f( 0.01 * self.escalaX + self.w, 0.25 * self.escalaY + self.h)
+        glVertex2f( 0.07 * self.escalaX + self.w, 0.14 * self.escalaY + self.h)
+        glVertex2f(-0.02 * self.escalaX + self.w, 0.15 * self.escalaY + self.h)
+        glVertex2f(-0.11 * self.escalaX + self.w, 0.10 * self.escalaY + self.h)
+        glVertex2f(-0.16 * self.escalaX + self.w, 0.11 * self.escalaY + self.h)
+        glEnd()
+        glBegin(GL_QUADS)
+        glVertex2f(-0.11 * self.escalaX + self.w, 0.10 * self.escalaY + self.h)
+        glVertex2f(-0.16 * self.escalaX + self.w, 0.11 * self.escalaY + self.h)
+        glVertex2f(-0.16 * self.escalaX + self.w, 0.02 * self.escalaY + self.h)
+        glVertex2f(-0.13 * self.escalaX + self.w, 0.018 * self.escalaY + self.h)
+        glEnd()
+        glColor3ub(10,0,0)
+        glBegin(GL_TRIANGLES)
+        glVertex2f(-0.16 * self.escalaX + self.w, 0.00 * self.escalaY + self.h)
+        glVertex2f(-0.12 * self.escalaX + self.w, 0.02 * self.escalaY + self.h)
+        glVertex2f(-0.19 * self.escalaX + self.w, 0.03 * self.escalaY + self.h)
+        glEnd()
 class Caras(object):
+
     def __init__(self,escalar,w,h):
         self.escalaX = 1 * escalar;
         self.escalaY = 16/9 * escalar
         self.w = w
         self.h = h
+
     def Principito(self):
         ##CARA##
         glColor3ub(255, 195, 155)
@@ -1273,6 +1490,7 @@ class Caras(object):
         glVertex2f(-0.027 * self.escalaX + self.w, 0.699 * self.escalaY + self.h)
         glVertex2f( 0.050 * self.escalaX + self.w, 0.725 * self.escalaY + self.h)
         glEnd()
+
     def Silueta_1(self):
         #Cara
         glColor3ub(40, 40, 40)
@@ -1294,6 +1512,7 @@ class Caras(object):
         glVertex2f( 0.22 * self.escalaX + self.w,  0.30 * self.escalaY + self.h)
         glVertex2f( 0.20 * self.escalaX + self.w,  0.47 * self.escalaY + self.h)
         glEnd()
+
     def Silueta_2(self):
         glColor3ub(10, 10, 10)
         glBegin(GL_QUADS)
@@ -1330,6 +1549,7 @@ class Caras(object):
         glVertex2f(-0.17 * self.escalaX + self.w, -0.05 * self.escalaY + self.h)
         glVertex2f(-0.22 * self.escalaX + self.w, -0.03 * self.escalaY + self.h)
         glEnd()
+
     def Rey(self):
         #cara
         glColor3ub(255, 228, 189)
@@ -1353,6 +1573,7 @@ class Caras(object):
         glVertex2f( 0.12 * self.escalaX + self.w,  0.41 * self.escalaY + self.h)
         glVertex2f( 0.15 * self.escalaX + self.w,  0.31 * self.escalaY + self.h)
         glEnd()
+
     def Farolero(self):
         glBegin(GL_POLYGON)
         glColor3ub(236, 217, 170)
@@ -1383,6 +1604,7 @@ class Caras(object):
         glVertex2f( 0.07 * self.escalaX + self.w,  0.45 * self.escalaY + self.h)
         glVertex2f( 0.13 * self.escalaX + self.w,  0.39 * self.escalaY + self.h)
         glEnd()
+
     def Flor(self):
         #brazo derecho
         glColor3ub(0,255,0)
@@ -1460,6 +1682,44 @@ class Caras(object):
         glVertex2f( 0.50 * self.escalaX + self.w,  0.20 * self.escalaY + self.h)
         glVertex2f( 0.30 * self.escalaX + self.w,  0.17 * self.escalaY + self.h)
         glEnd()
+
+    def Serpiente(self):
+        glColor3ub(46,170,61)
+        glBegin(GL_POLYGON)
+	    #cola
+        glVertex2f(-0.00 * self.escalaX + self.w,-0.44 * self.escalaY + self.h)
+        glVertex2f( 0.21 * self.escalaX + self.w,-0.30* self.escalaY + self.h)
+        glVertex2f( 0.00 * self.escalaX + self.w,-0.40 * self.escalaY + self.h)
+        glVertex2f(-0.27 * self.escalaX + self.w,-0.26 * self.escalaY + self.h)
+        glVertex2f(-0.26 * self.escalaX + self.w,-0.34 * self.escalaY + self.h)
+        glEnd()
+        #CUERPO
+        glBegin(GL_QUAD_STRIP)
+        glVertex2f(-0.27 * self.escalaX + self.w,-0.26 * self.escalaY + self.h)
+        glVertex2f(-0.26 * self.escalaX + self.w,-0.34 * self.escalaY + self.h)
+        glVertex2f( 0.06 * self.escalaX + self.w,-0.06 * self.escalaY + self.h)
+        glVertex2f( 0.10 * self.escalaX + self.w,-0.10 * self.escalaY + self.h)
+        glVertex2f( 0.13 * self.escalaX + self.w, 0.10 * self.escalaY + self.h)
+        glVertex2f( 0.20 * self.escalaX + self.w, 0.10 * self.escalaY + self.h)
+        glVertex2f( 0.08 * self.escalaX + self.w, 0.25 * self.escalaY + self.h)
+        glVertex2f( 0.11 * self.escalaX + self.w, 0.30 * self.escalaY + self.h)
+        glEnd()
+	    #CABEZA
+        glBegin(GL_POLYGON)
+        glVertex2f( 0.08 * self.escalaX + self.w, 0.25 * self.escalaY + self.h)
+        glVertex2f( 0.11 * self.escalaX + self.w, 0.30 * self.escalaY + self.h)
+        glVertex2f(-0.10 * self.escalaX + self.w, 0.30 * self.escalaY + self.h)
+        glVertex2f(-0.15 * self.escalaX + self.w, 0.24 * self.escalaY + self.h)
+        glVertex2f(-0.075 * self.escalaX + self.w, 0.23 * self.escalaY + self.h)
+        glEnd()
+        #LENGUA
+        glColor3ub(255,10,10)
+        glBegin(GL_TRIANGLES)
+        glVertex2f(-0.15 * self.escalaX + self.w,  0.21 * self.escalaY + self.h)
+        glVertex2f(-0.11 * self.escalaX + self.w,  0.25 * self.escalaY + self.h)
+        glVertex2f(-0.08 * self.escalaX + self.w,  0.24 * self.escalaY + self.h)
+        glEnd()
+
     def Geografo(self):
         #CARA
         glColor3ub(255,227,157)
@@ -1502,6 +1762,7 @@ class Caras(object):
         glVertex2f(-0.03 * self.escalaX + self.w, 0.57 * self.escalaY + self.h)
         glVertex2f( 0.02 * self.escalaX + self.w, 0.53 * self.escalaY + self.h)
         glEnd()
+
     def Vanidoso(self):
         #CARA
         glBegin(GL_POLYGON)
@@ -1562,6 +1823,7 @@ class Caras(object):
         glVertex2f( 0.16 * self.escalaX + self.w, 0.45 * self.escalaY + self.h)
         glVertex2f( 0.09 * self.escalaX + self.w, 0.43 * self.escalaY + self.h)
         glEnd()
+
     def HombreDeNegocios(self):
         #CARA 
         glColor3ub(255,214,141)
@@ -1601,4 +1863,72 @@ class Caras(object):
         glVertex2f( 0.13 * self.escalaX + self.w, 0.55 * self.escalaY + self.h)
         glVertex2f( 0.11 * self.escalaX + self.w, 0.53 * self.escalaY + self.h)
         glVertex2f( 0.14 * self.escalaX + self.w, 0.58 * self.escalaY + self.h)
+        glEnd()
+    def Ebrio(self):
+        #CARA
+        glColor3ub(255,211,0)
+        glBegin(GL_POLYGON)
+        glVertex2f(-0.13 * self.escalaX + self.w, 0.48 * self.escalaY + self.h)
+        glVertex2f(-0.265 * self.escalaX + self.w, 0.42 * self.escalaY + self.h)
+        glVertex2f(-0.26 * self.escalaX + self.w, 0.34 * self.escalaY + self.h)
+        glVertex2f(-0.30 * self.escalaX + self.w, 0.30 * self.escalaY + self.h)
+        glVertex2f(-0.26 * self.escalaX + self.w, 0.28 * self.escalaY + self.h)
+        glVertex2f(-0.18 * self.escalaX + self.w, 0.30 * self.escalaY + self.h)
+        glVertex2f(-0.19 * self.escalaX + self.w, 0.28 * self.escalaY + self.h)
+        glVertex2f(-0.13 * self.escalaX + self.w, 0.24 * self.escalaY + self.h)
+        glVertex2f(-0.11 * self.escalaX + self.w, 0.10 * self.escalaY + self.h)
+        glVertex2f( 0.01 * self.escalaX + self.w, 0.24 * self.escalaY + self.h)
+        glVertex2f( 0.03 * self.escalaX + self.w, 0.36 * self.escalaY + self.h)
+        glVertex2f(-0.05 * self.escalaX + self.w, 0.45 * self.escalaY + self.h)
+        glEnd()
+        #CABELLO
+        glColor3ub(110,63,11)
+        glBegin(GL_POLYGON)
+        glVertex2f(-0.10 * self.escalaX + self.w, 0.50 * self.escalaY + self.h)
+        glVertex2f(-0.20 * self.escalaX + self.w, 0.53 * self.escalaY + self.h)
+        glVertex2f(-0.19 * self.escalaX + self.w, 0.48 * self.escalaY + self.h)
+        glVertex2f(-0.265 * self.escalaX + self.w, 0.42 * self.escalaY + self.h)
+        glVertex2f(-0.12 * self.escalaX + self.w, 0.45 * self.escalaY + self.h)
+        glVertex2f(-0.105 * self.escalaX + self.w, 0.42 * self.escalaY + self.h)
+        glVertex2f(-0.09 * self.escalaX + self.w, 0.44 * self.escalaY + self.h)
+        glVertex2f( 0.03 * self.escalaX + self.w, 0.36 * self.escalaY + self.h)
+        glVertex2f(-0.03 * self.escalaX + self.w, 0.46 * self.escalaY + self.h)
+        glVertex2f( 0.00 * self.escalaX + self.w, 0.49 * self.escalaY + self.h)
+        glEnd()
+        
+    def Zorro(self):
+        #CARA   
+        glColor3ub(250,250,250)
+        glBegin(GL_QUADS)
+        glVertex2f(-0.17 * self.escalaX + self.w,-0.03 * self.escalaY + self.h)
+        glVertex2f(-0.41 * self.escalaX + self.w, 0.12 * self.escalaY + self.h)
+        glVertex2f(-0.13 * self.escalaX + self.w, 0.28 * self.escalaY + self.h)
+        glVertex2f( 0.14 * self.escalaX + self.w, 0.08 * self.escalaY + self.h)
+        glEnd()
+        glColor3ub(255,127,0)
+        glBegin(GL_POLYGON)
+        glVertex2f(-0.23 * self.escalaX + self.w, 0.18 * self.escalaY + self.h)
+        glVertex2f(-0.34 * self.escalaX + self.w, 0.17 * self.escalaY + self.h)
+        glVertex2f(-0.28 * self.escalaX + self.w, 0.27 * self.escalaY + self.h)
+        glVertex2f(-0.24 * self.escalaX + self.w, 0.41 * self.escalaY + self.h)
+        glVertex2f(-0.18 * self.escalaX + self.w, 0.32 * self.escalaY + self.h)
+        glVertex2f(-0.07 * self.escalaX + self.w, 0.31 * self.escalaY + self.h)
+        glVertex2f( 0.01 * self.escalaX + self.w, 0.40 * self.escalaY + self.h)
+        glVertex2f( 0.01 * self.escalaX + self.w, 0.25 * self.escalaY + self.h)
+        glVertex2f( 0.07 * self.escalaX + self.w, 0.14 * self.escalaY + self.h)
+        glVertex2f(-0.02 * self.escalaX + self.w, 0.15 * self.escalaY + self.h)
+        glVertex2f(-0.11 * self.escalaX + self.w, 0.10 * self.escalaY + self.h)
+        glVertex2f(-0.16 * self.escalaX + self.w, 0.11 * self.escalaY + self.h)
+        glEnd()
+        glBegin(GL_QUADS)
+        glVertex2f(-0.11 * self.escalaX + self.w, 0.10 * self.escalaY + self.h)
+        glVertex2f(-0.16 * self.escalaX + self.w, 0.11 * self.escalaY + self.h)
+        glVertex2f(-0.16 * self.escalaX + self.w, 0.02 * self.escalaY + self.h)
+        glVertex2f(-0.13 * self.escalaX + self.w, 0.018 * self.escalaY + self.h)
+        glEnd()
+        glColor3ub(10,0,0)
+        glBegin(GL_TRIANGLES)
+        glVertex2f(-0.16 * self.escalaX + self.w, 0.00 * self.escalaY + self.h)
+        glVertex2f(-0.12 * self.escalaX + self.w, 0.02 * self.escalaY + self.h)
+        glVertex2f(-0.19 * self.escalaX + self.w, 0.03 * self.escalaY + self.h)
         glEnd()

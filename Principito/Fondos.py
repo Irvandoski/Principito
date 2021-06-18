@@ -4,12 +4,14 @@ from OpenGL.GLUT import *
 import Objetos
 import sys
 import time
+
 class Fondos(object):
+
     def __init__(self):
         self.did = 1 
+
     def Desierto(self, Color1, Color2):
         
-
         glColor3f(Color1[0], Color1[1], Color1[2])
         glBegin(GL_QUADS)
         glVertex2f(-1, -1)
@@ -64,9 +66,9 @@ class Fondos(object):
         glVertex2f(1,-1)
         glVertex2f(-1,-1)
         glEnd()
+
     def DesiertoNoche(self):
         
-
         glColor3ub(235, 141, 0)
         glBegin(GL_QUADS)
         glVertex2f(-1, -1)
@@ -121,7 +123,9 @@ class Fondos(object):
         glVertex2f(1,-1)
         glVertex2f(-1,-1)
         glEnd()
+
     def PlanetaPrincipito(self):
+
         glColor3ub(128, 128, 128)
         glBegin(GL_POLYGON)
         glVertex2f( 0.00, -0.65)
@@ -151,6 +155,7 @@ class Fondos(object):
         glVertex2f(-0.56, -1.00)
         glVertex2f(-0.55, -0.95)
         glEnd()
+
     def PlanetaCafé(self):
         glColor3ub(159, 108, 53)
         glBegin(GL_POLYGON)
@@ -162,25 +167,16 @@ class Fondos(object):
         glVertex2f(-1.00, -0.80)
         glVertex2f(-0.50, -0.70)
         glEnd()
-    def PlanetaVerde(self, dia):
-        if dia:
-            glColor3ub(145, 228, 225)
-            glBegin(GL_QUADS)
-            glVertex2f(-1, -1)
-            glVertex2f(-1,  1)
-            glColor3ub(44, 255, 186)
-            glVertex2f( 1,  1)
-            glVertex2f( 1, -1)
-            glEnd()
-        else:
-            glColor3ub(235, 141, 0)
-            glBegin(GL_QUADS)
-            glVertex2f(-1, -1)
-            glVertex2f(-1,  1)
-            glColor3ub(75, 0, 156)
-            glVertex2f( 1,  1)
-            glVertex2f( 1, -1)
-            glEnd()
+
+    def PlanetaVerde(self, Color1, Color2):
+        glColor3f(Color1[0], Color1[1], Color1[2])
+        glBegin(GL_QUADS)
+        glVertex2f(-1, -1)
+        glVertex2f(-1,  1)
+        glColor3f(Color2[0], Color2[1], Color2[2])
+        glVertex2f( 1,  1)
+        glVertex2f( 1, -1)
+        glEnd()
         glColor3ub(55, 169, 53)
         glBegin(GL_POLYGON)
         glVertex2f( 0.00, -0.65)
@@ -191,6 +187,7 @@ class Fondos(object):
         glVertex2f(-1.00, -0.80)
         glVertex2f(-0.50, -0.70)
         glEnd()
+
     def Stage(self):
         
         glColor3ub(0, 0, 0)
@@ -220,6 +217,7 @@ class Fondos(object):
         glVertex2f( 0.30, -0.16)
         glVertex2f( 0.10, -0.43)
         glEnd()
+
     def Cuarto(self):
         glColor3ub(55, 55, 55)
         glBegin(GL_QUADS)

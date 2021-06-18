@@ -25,13 +25,16 @@
     <Compile Include="Dialogos.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Faro.pyw">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Fondos.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Main.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="flor.py">
+    <Compile Include="Flor.pyw">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Capitulos.py">
@@ -39,6 +42,12 @@
     </Compile>
     <Compile Include="Objetos.py" />
     <Compile Include="Personas.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Pozo.pyw">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Zorro.pyw">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -49,11 +58,12 @@
     <Content Include="02Flor.mp3" />
     <Content Include="03Rey.mp3" />
     <Content Include="04Banidoso.mp3" />
-    <Content Include="07Ebrio.mp3" />
-    <Content Include="08BuisnessMen.mp3" />
+    <Content Include="05Ebrio.mp3" />
+    <Content Include="06BuisnessMen.mp3" />
+    <Content Include="07Farolero.mp3" />
+    <Content Include="08Geologo.mp3" />
     <Content Include="09Farolero.mp3" />
-    <Content Include="10Geologo.mp3" />
-    <Content Include="12Muerte.mp3" />
+    <Content Include="10Muerte.mp3" />
     <Content Include="3Dmodel\Faro.bbmodel" />
     <Content Include="3Dmodel\flor.bbmodel" />
     <Content Include="3Dmodel\Poso.bbmodel" />

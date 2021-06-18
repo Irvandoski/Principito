@@ -2,6 +2,7 @@ class Dialogos(object):
     def __init__(self):
         self.Ready = 1
         self.dialogos = []
+
     def UnoPiloto(self):
        self.dialogos.clear()
        self.dialogos.append( "Por favor podrías dibujarme un borrego..")
@@ -30,6 +31,7 @@ class Dialogos(object):
        self.dialogos.append( "Alcanzará seguramente. Te he dibujado un borrego bien pequeño. ")
        self.dialogos.append( "No tan pequeño. Mira, ya se durmió ")
         #NARRACION
+
     def DosAvion(self):
        self.dialogos.clear()
        self.dialogos.append( "Y qué es esa cosa? ")
@@ -49,6 +51,7 @@ class Dialogos(object):
        self.dialogos.append( "A cualquier parte. Derecho, siempre adelante... ")
        self.dialogos.append( "No importa! Mi casa es muy pequeña... Delante, siempre adelante de uno... No se puede ir muy lejos. ")
         #NARRACIÓN
+
     def TresPuesta(self):
        self.dialogos.clear()
        self.dialogos.append( "Me encantan las puestas de sol. Vamos a ver una puesta del sol. ")
@@ -57,11 +60,12 @@ class Dialogos(object):
        self.dialogos.append( "Esperar a que el sol se ponga. ")
        self.dialogos.append( "Me creo siempre en mi casa! ")
        self.dialogos.append( "... ")
-      # self.dialogos.append( "... ")
+	   # self.dialogos.append( "... ")
        self.dialogos.append( "Un día, vi ponerse el sol cuarenta y tres veces. ")
        self.dialogos.append( "... ")
        self.dialogos.append( "Sabes?... Cuando uno está verdaderamente triste son agradables las puestas de sol. ")
        self.dialogos.append( "Estabas, pues, verdaderamente triste el día de las cuarenta y tres veces? ")
+
     def CuatroEspinas(self):
        self.dialogos.clear()
        self.dialogos.append( "Si un borrego come arbustos, Come tambien flores?")
@@ -90,6 +94,7 @@ class Dialogos(object):
        self.dialogos.append( "... ")
        self.dialogos.append( "Si alguien ama una flor de las que no existe más, que un ejemplar entre millones y millones de estrellas, es bastante para que sea feliz cuando mira las estrellas. se dice 'Mi flor está allí, en alguna parte...'Y si el cordero come la flor, para él es como si, bruscamente, todas las estrellas se apagaran. Y esto, No es importante? ")
         #NARRACIÓN -el principito llora :c-
+
     def CincoFlor(self):
        self.dialogos.clear()
        self.dialogos.append( "Ah!, acabo de despertarme...Perdóname...Todavía estoy toda despeinada... ")
@@ -108,7 +113,7 @@ class Dialogos(object):
        self.dialogos.append( "Entiendo. ")
        #Esto se lo dice al piloto
        self.dialogos.append( "No supe comprender nada entonces. Debí haberla juzgado por sus actos y no por sus palabras. Me perfumaba e iluminada. No debí haber huido jamás! Debí haber adivinado su ternura, detrás de sus pobres astucias. Las flores son tan contradictorias! Pero yo era demasaido joven para saber amarla.")
-    #NARRACIÓN
+
     def SeisByeFlor(self):
        self.dialogos.clear()
        self.dialogos.append( "Adiós.")
@@ -124,6 +129,7 @@ class Dialogos(object):
        self.dialogos.append( "No te detengas, has decidido partir. Vete. ")
        self.dialogos.append( "...")
         #NARRACIÓN -creo-
+
     def SieteRey(self):
        self.dialogos.clear()
        self.dialogos.append( "Ah! He ahí un súbdito, Ven, acércate. ")
@@ -165,6 +171,7 @@ class Dialogos(object):
        self.dialogos.append( "Puedo nombrarte embajador! ")
        self.dialogos.append( "Los adultos son verdaderamente extraños. ")
         #NARRADOR 
+
     def OchoVanidoso(self):
        self.dialogos.clear()
        self.dialogos.append( "Ah! Ah! He aquí la visita de un admirador! ")
@@ -183,6 +190,7 @@ class Dialogos(object):
        self.dialogos.append( "Pero si eres la única persona en el planeta! ")
        self.dialogos.append( "Hazme el placer! Admírame lo mismo! ")
        self.dialogos.append( "Te admiro, pero, Por qué puede interesarte que te admire?... Las personas grandes son decididamente muy extrañas")
+
     def NueveBebedor(self):
        self.dialogos.clear()
        self.dialogos.append( "Qué haces ahí? ")
@@ -194,6 +202,7 @@ class Dialogos(object):
        self.dialogos.append( "Vergüenza de qué? ")
        self.dialogos.append( "Vergüenza de beber! ")
        self.dialogos.append( "Las personas grandes son decididamente muy pero muy extrañas " )
+
     def OnceNegocios(self):
        self.dialogos.clear()
        self.dialogos.append( "Buenos días. Su cigarrillo está apagado.  ")
@@ -239,6 +248,7 @@ class Dialogos(object):
        self.dialogos.append( "Es todo? ")
        self.dialogos.append( "Es suficiente. ")
        self.dialogos.append( "Yo...poseo una flor que riego todos los días. Poseo tres volcanes que deshollino todas las semanas . Es útil para mis volcanes y es útil para mi flor que yo los posea. Pero tú no eres útil a las estrellas...")
+
     def DoceFarolero(self):
        self.dialogos.clear()
         #NARRACIÓN DE LO QUE HACE EL FAROLERO
@@ -267,6 +277,7 @@ class Dialogos(object):
        self.dialogos.append( "Es no tener suerte...Buenos días. ")
        self.dialogos.append( "Éste es el único de quien pude haberme hecho amigo. Pero su planeta es verdaderamente demasiado pequeño. No hay lugar para dos... ")
         #NARRACIÓN
+
     def TreceGeografo(self):
         self.dialogos.clear()
         self.dialogos.append(  "Toma! He aquí un explorador, De dónde vienes? ")
@@ -309,6 +320,7 @@ class Dialogos(object):
         self.dialogos.append(  "Mi flor es efímera, se dijo el principito, y sólo tiene cuatro espinas para defenderse contra el mundo!...Este, bueno, Qué me aconsejáis que vaya a visitar? ")
         self.dialogos.append(  "El planeta Tierra tiene buena reputación... ")
         #NARRACIÓN no se que tan larga porque ya llegó a la tierra jiji
+
     def CatorceSerpiente(self):
         self.dialogos.clear()
         self.dialogos.append(  "Buenas noches ")
@@ -332,6 +344,7 @@ class Dialogos(object):
         self.dialogos.append(  "Me das lástima, tú, tan débil, sobre esta Tierra de granito. Puedo ayudarte si algún día extrañas demasiado a tu planeta. Puedo... ")
         self.dialogos.append(  "Oh! Te he comprendido muy bien, pero, por qué hablas siempre con enigmas? ")
         self.dialogos.append(  "Yo los resuelvo todos ")
+
     def QuinceFlores(self):
         self.dialogos.clear()
         self.dialogos.append(  "Buenos días ")
@@ -339,6 +352,7 @@ class Dialogos(object):
         self.dialogos.append(  "Quiénes sois? ")
         self.dialogos.append(  "Somos rosas ")
         self.dialogos.append(  "Ah! ...Mi flor me había contado que era la única de su especie en el universo...Me creía rico con una flor única y no poseo más que una rosa ordinaria. La rosa y mis tres volcanes que me llegan a la rodilla, uno de los cuales quizá está apagado para siempre. Realmente no soy un gran príncipe..." )
+
     def DieciseisZorro(self):
         self.dialogos.clear()
         self.dialogos.append(  "Buenos días ")
@@ -379,6 +393,7 @@ class Dialogos(object):
         self.dialogos.append(  "Qué es un rito? ")
         self.dialogos.append(  "Es también algo demasiado olvidado. Es lo que hace que un día sea diferente de los otros días; una hora, de las otras horas. Entre los cazadores, por ejemplo, hay un rito. El jueves bailan con las muchachas del pueblo. El jueves es, pues, un día maravilloso. Voy a pasearme hasta la viña. Si los cazadores no bailaran en día fijo, todos los días se parecerían y yo no tendría vacaciones. ")
         #NARRACIÓN El principito domesticó al zorro
+
     def DiecisieteDespedidaZorro(self):
         self.dialogos.clear()
         self.dialogos.append(  "Ah!... Voy a llorar")
@@ -400,6 +415,7 @@ class Dialogos(object):
         self.dialogos.append(  "El tiempo que perdí por mi rosa... ")
         self.dialogos.append(  "Los hombres han olvidado esta verdad, pero tú no debes olvidarla. Eres responsable para siempre de lo que has domesticado. Eres responsable de tu rosa...  ")
         self.dialogos.append(  "Soy responsable de mi rosa...  ")
+
     def DieciochoPozo(self):
         self.dialogos.clear()
         self.dialogos.append(  "Ah! Tus recuerdos son bien lindos, pero todavía no he reparado mi avión, no tengo nada para beber y  sería feliz si pudiera caminar muy suavemente hacia una fuente. ")
@@ -448,6 +464,7 @@ class Dialogos(object):
         self.dialogos.append(  "... ")
         self.dialogos.append(  "Ah! . Temo que... ")
         self.dialogos.append(  "Debes trabajar ahora. Debes volver a tu máquina. Te espero aquí. Vuelve mañana por la tarde... ")
+
     def DiecinueveByePrincipito(self):
         self.dialogos.clear()
         self.dialogos.append(  "No te acuerdas? No es exactamente aquí!  ")
@@ -493,6 +510,7 @@ class Dialogos(object):
         self.dialogos.append(  "No me separaré de ti. ")
         self.dialogos.append(  "Es cierto que no tienen veneno en la segunda mordedura... ")
         #Se hace de nochesita
+
     def Veinte(self):
         self.dialogos.clear()
         self.dialogos.append(  "Has hecho mal en estar aquí. Vas a sufrir. Parecerá que me he muerto y no será verdad... ")
@@ -508,4 +526,9 @@ class Dialogos(object):
         self.dialogos.append(  "Sabes?... mi flor... soy responsable. Y es tan débil! Y es tan ingenua! Tiene cuatro espinas insignificantes para protegerse contra el mundo... ")
         self.dialogos.append(  "... ")
         self.dialogos.append(  "Bien... Eso es todo... ")
+
+    
+    def Veintiuno(self):
+        self.dialogos.clear()
+        self.dialogos.append(  "Al ver las estrellas, veo muchos cascabeles riendose con la risa del principito")
         #Narración de cierre

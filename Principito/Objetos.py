@@ -4,11 +4,13 @@ from OpenGL.GLUT import *
 import sys
 
 class Objetos():
+
      def __init__(self,escalar,w,h):
         self.escalaX = 1 * escalar;
         self.escalaY = 16/9 * escalar
         self.w = w
         self.h = h
+
      def cuadro_pequeño(self):
         #fondo cabello
         glColor3ub(240, 240, 240)
@@ -23,6 +25,7 @@ class Objetos():
         glVertex2f( 0.16 * self.escalaX, -0.25 * self.escalaY)
         glVertex2f( 0.20 * self.escalaX, -0.43 * self.escalaY)
         glEnd()
+
      def cuadro_grande(self):
         #fondo cabello
         glColor3ub(119, 66, 3)
@@ -71,6 +74,7 @@ class Objetos():
         glVertex2f( 0.40, -0.20)
         glVertex2f( 0.20, -0.20)
         glEnd()
+
      def Avioneta(self):
         #fondo cabello
         glColor3ub(255, 0, 0)
@@ -118,6 +122,7 @@ class Objetos():
         glVertex2f(-0.54 * self.escalaX + self.w, -0.12 * self.escalaY + self.h)
         glVertex2f(-0.52 * self.escalaX + self.w,  0.00 * self.escalaY + self.h)
         glEnd()
+
      def Faro2DPrendido(self):
         #fondo cabello
         glColor3ub(0, 0, 0)
@@ -154,6 +159,7 @@ class Objetos():
         glVertex2f(-0.06 * self.escalaX + self.w, 0.20 * self.escalaY + self.h)
         glVertex2f(-0.06 * self.escalaX + self.w, 0.225 * self.escalaY + self.h)
         glEnd()
+
      def Faro2DApagado(self):
         #fondo cabello
         glColor3ub(0, 0, 0)
@@ -190,6 +196,7 @@ class Objetos():
         glVertex2f(-0.06 * self.escalaX + self.w, 0.20 * self.escalaY + self.h)
         glVertex2f(-0.06 * self.escalaX + self.w, 0.225 * self.escalaY + self.h)
         glEnd()
+
      def Flor(self):
         glColor3ub(137, 255, 133)
         glBegin(GL_QUADS)
@@ -314,6 +321,7 @@ class Objetos():
         glVertex3f(-3.0 - 9,  0.00, -4.5 + sum)
         glVertex3f( 3.0 - 9,  0.00, -4.5 + sum)
         glEnd()
+
      def Faro(self):
         glColor3ub(35, 35, 35)
         glBegin(GL_QUADS)
@@ -348,7 +356,8 @@ class Objetos():
         glVertex3f(-100.0 ,  0.00, -100.0)
         glVertex3f( 100.0 ,  0.00, -100.0)
         glEnd()
-     def Poso(self):
+
+     def Pozo(self):
         glColor3ub(60, 60, 60)
         glBegin(GL_QUADS)
         #Pared 1
@@ -479,6 +488,7 @@ class Objetos():
         glVertex3f(-100.0 ,  0.00, -100.0)
         glVertex3f( 100.0 ,  0.00, -100.0)
         glEnd()
+
      def Zorro(self):
         glBegin(GL_QUADS)
         #Cuerpo
